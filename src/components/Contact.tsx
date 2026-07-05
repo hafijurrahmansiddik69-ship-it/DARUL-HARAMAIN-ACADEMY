@@ -31,11 +31,11 @@ const Contact = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6 text-[#cfa852] flex-shrink-0" />
-                <p>+৮৮০ ১৭XXXXXXXX</p>
+                <p>01300389797</p>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-6 h-6 text-[#cfa852] flex-shrink-0" />
-                <p>info@darulharamain.academy</p>
+                <p>darulharamainacademy@gmail.com</p>
               </div>
             </div>
           </div>
