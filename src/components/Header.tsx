@@ -86,11 +86,11 @@ const Header = () => {
             referrerPolicy="no-referrer"
             className="h-14 w-auto object-contain rounded-full shadow-sm border border-emerald-100 group-hover:scale-105 transition-transform duration-200"
           />
-          <div className="flex flex-col">
+          <div className="flex flex-col justify-center">
             <span className="font-black text-xl md:text-2xl tracking-tight text-emerald-900 group-hover:text-[#cfa852] transition-colors duration-300">
               DARUL HARAMAIN ACADEMY
             </span>
-            <span className="font-bold text-base md:text-lg text-[#cfa852] group-hover:text-emerald-800 tracking-wide leading-none mt-0.5 transition-colors duration-300">
+            <span className="font-bold text-base md:text-lg text-[#cfa852] group-hover:text-emerald-800 tracking-wide leading-none mt-1 transition-colors duration-300">
               أكاديمية دار الحرمين
             </span>
           </div>

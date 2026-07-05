@@ -29,27 +29,12 @@ const About = () => {
             DARUL HARAMAIN ACADEMY
           </h2>
           <div className="w-20 h-1 bg-[#cfa852] rounded mb-8"></div>
-          <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-light mb-6">
-            A passionate and creative tech enthusiast. I specialize in Software Development, Web Solutions, and Creative Design.
+          <p className="text-xl md:text-2xl text-emerald-800 font-bold leading-relaxed mb-6">
+            An Arabic-English Medium Academy with Hifzul Quran
           </p>
           <p className="text-base md:text-lg text-slate-600 leading-relaxed font-light mb-8">
-            My goal is to help businesses grow by building smart, future-ready, and user-friendly digital solutions.
+            ইসলামি মূল্যবোধ এবং আধুনিক শিক্ষার এক অনন্য সমন্বয়। কুরআন হিফজ করার পাশাপাশি আন্তর্জাতিক মানের সিলেবাসে আরবি ও ইংরেজি ভাষায় দক্ষতা অর্জনের জন্য এক নির্ভরযোগ্য দ্বীনি শিক্ষাপ্রতিষ্ঠান।
           </p>
-          
-          <div className="grid grid-cols-3 gap-4 border-t border-slate-200 pt-8">
-            <div>
-              <p className="text-2xl md:text-3xl font-extrabold text-emerald-800">5+</p>
-              <p className="text-xs md:text-sm text-slate-500 font-medium">Years Experience</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-extrabold text-emerald-800">50+</p>
-              <p className="text-xs md:text-sm text-slate-500 font-medium">Projects Done</p>
-            </div>
-            <div>
-              <p className="text-2xl md:text-3xl font-extrabold text-emerald-800">100%</p>
-              <p className="text-xs md:text-sm text-slate-500 font-medium">Client Satisfaction</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
