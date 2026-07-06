@@ -109,7 +109,7 @@ const Header = () => {
       <div className="py-4 px-6 flex justify-between items-center bg-white relative">
         <Link to="/" className="flex items-center gap-3 group">
           <img 
-            src="https://res.cloudinary.com/dlklqihg6/image/upload/v1783252603/ni4fothm1jmbxcr4eqnd.jpg" 
+            src="https://res.cloudinary.com/dlklqihg6/image/upload/v1783328221/waznt8bkgdajaku1w2pc.jpg" 
             alt="DARUL HARAMAIN ACADEMY Logo" 
             referrerPolicy="no-referrer"
             className="h-14 w-auto object-contain rounded-full shadow-sm border border-emerald-100 group-hover:scale-105 transition-transform duration-200"
