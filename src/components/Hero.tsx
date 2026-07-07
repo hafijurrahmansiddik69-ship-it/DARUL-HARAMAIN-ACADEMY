@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative text-white min-h-[60vh] md:min-h-[75vh] px-6 flex flex-col items-center justify-start overflow-hidden">
       {/* Background Image with Referrer Policy */}
       <img 
-        src="https://res.cloudinary.com/dlklqihg6/image/upload/v1783251359/witlqdfks0pumaycoagk.jpg" 
+        src="https://res.cloudinary.com/dlklqihg6/image/upload/v1783448987/dbdubbzo2k1wv3dwd5ow.jpg" 
         alt="Islamic Academy Background" 
         referrerPolicy="no-referrer"
         className="absolute inset-0 w-full h-full object-cover select-none"
