@@ -13,8 +13,12 @@ export default function Footer() {
               className="h-12 w-12 object-contain rounded-full border border-[#cfa852]/30"
             />
             <div className="flex flex-col">
-              <h2 className="text-xl font-black tracking-tight text-[#cfa852]">DARUL HARAMAIN ACADEMY</h2>
-              <span className="text-xs font-bold text-gray-300 tracking-wider">أكاديمية دار الحرمين</span>
+              <h2 className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#cfa852] via-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow-sm select-none">
+                DARUL HARAMAIN ACADEMY
+              </h2>
+              <span className="text-xs font-bold text-blue-400 tracking-widest mt-0.5 uppercase">
+                أكاديمية دار الحرمين
+              </span>
             </div>
           </div>
           <p className="text-gray-300 font-light">প্রতিষ্ঠাতা ও চেয়ারম্যান: হাফিজুর রহমান সিদ্দিক</p>

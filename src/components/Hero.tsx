@@ -14,14 +14,20 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/15"></div>
       
       {/* Ticker */}
-      <div className="relative z-10 w-full overflow-hidden py-4 bg-white/10 backdrop-blur-md border-y border-white/20 mt-6">
+      <div className="relative z-10 w-full overflow-hidden py-3.5 bg-black/25 backdrop-blur-md border-y border-white/20 mt-6">
         <motion.div
           initial={{ x: "100%" }}
           animate={{ x: "-100%" }}
           transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-          className="whitespace-nowrap text-lg font-medium tracking-wide text-[#fdfaf2]"
+          className="whitespace-nowrap text-lg md:text-xl font-medium tracking-wide text-[#fdfaf2] flex gap-6 items-center"
         >
-          স্বাগতম! • অনুপ্রাণিত হোন • অসাধারণ বক্তা • নতুন ইভেন্ট আসছে • যোগাযোগ করুন • ডিজিটাল সリューション • ক্যারিয়ার গাইডেন্স • মোটিভেশনাল স্পিচ
+          <span>Welcome to Darul Haramain Academy</span>
+          <span className="text-[#cfa852] font-bold">•</span>
+          <span>Welcome to Darul Haramain Academy</span>
+          <span className="text-[#cfa852] font-bold">•</span>
+          <span>Welcome to Darul Haramain Academy</span>
+          <span className="text-[#cfa852] font-bold">•</span>
+          <span>Welcome to Darul Haramain Academy</span>
         </motion.div>
       </div>
     </section>

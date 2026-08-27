@@ -27,7 +27,7 @@ const About = () => {
           </div>
           
           <div className="mb-6">
-            <h2 className="text-3xl md:text-4xl font-black text-emerald-900 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-emerald-900 via-emerald-700 to-[#cfa852] bg-clip-text text-transparent tracking-tight">
               DARUL HARAMAIN ACADEMY
             </h2>
             <div className="w-20 h-1 bg-[#cfa852] rounded my-4 mx-auto md:mx-0"></div>
