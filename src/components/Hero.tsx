@@ -18,16 +18,16 @@ const Hero = () => {
         <motion.div
           initial={{ x: "100%" }}
           animate={{ x: "-100%" }}
-          transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-          className="whitespace-nowrap text-lg md:text-xl font-medium tracking-wide text-[#fdfaf2] flex gap-6 items-center"
+          transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+          className="whitespace-nowrap text-lg md:text-xl font-bold tracking-wide text-amber-400 drop-shadow flex gap-8 items-center"
         >
-          <span>Welcome to Darul Haramain Academy</span>
-          <span className="text-[#cfa852] font-bold">•</span>
-          <span>Welcome to Darul Haramain Academy</span>
-          <span className="text-[#cfa852] font-bold">•</span>
-          <span>Welcome to Darul Haramain Academy</span>
-          <span className="text-[#cfa852] font-bold">•</span>
-          <span>Welcome to Darul Haramain Academy</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
+          <span className="text-white/80 font-bold text-xl">•</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
+          <span className="text-white/80 font-bold text-xl">•</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
+          <span className="text-white/80 font-bold text-xl">•</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
         </motion.div>
       </div>
     </section>
