@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img 
-              src="https://res.cloudinary.com/dlklqihg6/image/upload/v1783328221/waznt8bkgdajaku1w2pc.jpg" 
+              src="/src/assets/images/academy_logo_1791617941870.jpg" 
               alt="DARUL HARAMAIN ACADEMY Logo" 
               referrerPolicy="no-referrer"
               className="h-12 w-12 object-contain rounded-full border border-[#cfa852]/30"
@@ -16,24 +16,26 @@ export default function Footer() {
               <h2 className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#cfa852] via-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow-sm select-none">
                 DARUL HARAMAIN ACADEMY
               </h2>
-              <span className="text-xs font-bold text-blue-400 tracking-widest mt-0.5 uppercase">
+              <span className="text-xs font-bold font-arabic text-blue-400 tracking-widest mt-0.5">
                 أكاديمية دار الحرمين
               </span>
             </div>
           </div>
-          <p className="text-gray-300 font-light">প্রতিষ্ঠাতা ও চেয়ারম্যান: হাফিজুর রহমান সিদ্দিক</p>
-          <p className="text-gray-400 text-sm mt-4">ইসলামি মূল্যবোধ এবং আধুনিক শিক্ষার এক অনন্য সমন্বয়।</p>
-          <p className="text-gray-400">উপদেষ্টা: </p>
-          <p className="text-gray-400 mt-2">মেইল: darulharamainacademy@gmail.com</p>
-          <p className="text-gray-400">ফোন: 01300389797</p>
+          <p className="text-gray-300 font-medium">প্রতিষ্ঠাতা ও চেয়ারম্যান: হাফিজুর রহমান সিদ্দিক</p>
+          <p className="text-gray-400 text-sm mt-3">ইসলামি মূল্যবোধ এবং আধুনিক শিক্ষার এক অনন্য সমন্বয়।</p>
+          <div className="mt-4 space-y-1.5 text-xs text-gray-300">
+            <p><span className="text-amber-300">ঠিকানা:</span> গুজিয়া, মোকামতলা ও শিবগঞ্জ, বগুড়া, Bangladesh</p>
+            <p><span className="text-amber-300">মেইল:</span> <a href="mailto:darulharamainacademy@gmail.com" className="hover:text-white transition-colors">darulharamainacademy@gmail.com</a></p>
+            <p><span className="text-amber-300">হটলাইন:</span> <a href="tel:01880800901" className="hover:text-white transition-colors font-mono font-bold">018 80 800 901</a></p>
+          </div>
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-4 border-b border-emerald-900 pb-2 text-[#cfa852]">Quick Link</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Privacy And Policy</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Terms and Conditions</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            <li><a href="#about" className="hover:text-white transition-colors">About Us (আমাদের সম্পর্কে)</a></li>
+            <li><a href="#academic-programs" className="hover:text-white transition-colors">Academic Programs (বিভাগসমূহ)</a></li>
+            <li><a href="#notice-board" className="hover:text-white transition-colors">Notice Board (নোটিশ বোর্ড)</a></li>
+            <li><a href="#contact" className="hover:text-white transition-colors">Contact Us (যোগাযোগ)</a></li>
           </ul>
         </div>
         <div>
