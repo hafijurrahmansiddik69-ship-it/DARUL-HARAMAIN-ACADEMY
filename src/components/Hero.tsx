@@ -178,13 +178,23 @@ const Hero: React.FC = () => {
           </span>
         </div>
 
-        {/* Academy English & Bengali Titles */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-2 font-bengali">
-          দারুল হারামাইন একাডেমি
-        </h1>
-        <p className="text-sm md:text-lg font-bold tracking-widest text-emerald-200/90 uppercase mb-3">
-          DARUL HARAMAIN ACADEMY
-        </p>
+        {/* Academy Bengali & English Typography */}
+        <div className="flex flex-col items-center justify-center mb-3">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-2 font-bengali drop-shadow-md">
+            দারুল হারামাইন একাডেমি
+          </h1>
+          
+          <div className="flex flex-col items-center">
+            {/* DARUL HARAMAIN - Large and prominent matching the Bengali title width & weight */}
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-wider bg-gradient-to-r from-amber-200 via-amber-400 to-[#cfa852] bg-clip-text text-transparent uppercase drop-shadow-sm font-sans">
+              DARUL HARAMAIN
+            </span>
+            {/* ACADEMY - Smaller & spaced out (ফাঁকা ফাঁকা) underneath */}
+            <span className="text-xs sm:text-sm md:text-base font-bold tracking-[0.35em] sm:tracking-[0.45em] text-emerald-200/90 uppercase mt-1 pl-[0.35em] sm:pl-[0.45em]">
+              ACADEMY
+            </span>
+          </div>
+        </div>
 
         {/* Academic Tagline */}
         <p className="text-base sm:text-lg md:text-xl text-amber-200/95 font-medium max-w-2xl mx-auto mb-3">

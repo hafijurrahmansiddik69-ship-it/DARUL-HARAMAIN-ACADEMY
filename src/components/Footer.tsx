@@ -13,10 +13,16 @@ export default function Footer() {
               className="h-12 w-12 object-contain rounded-full border border-[#cfa852]/30"
             />
             <div className="flex flex-col">
-              <h2 className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#cfa852] via-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow-sm select-none">
-                DARUL HARAMAIN ACADEMY
+              <span className="text-xs sm:text-sm font-bold text-emerald-300/90 leading-tight">
+                দারুল হারামাইন একাডেমি
+              </span>
+              <h2 className="text-xl sm:text-2xl font-black tracking-wide bg-gradient-to-r from-[#cfa852] via-amber-400 to-amber-200 bg-clip-text text-transparent drop-shadow-sm select-none uppercase leading-tight mt-0.5">
+                DARUL HARAMAIN
               </h2>
-              <span className="text-xs font-bold font-arabic text-blue-400 tracking-widest mt-0.5">
+              <span className="text-[10px] font-bold tracking-[0.35em] text-emerald-200/90 uppercase mt-0.5 pl-[0.35em] leading-none">
+                ACADEMY
+              </span>
+              <span className="text-xs font-bold font-arabic text-[#cfa852]/90 tracking-widest mt-1">
                 أكاديمية دار الحرمين
               </span>
             </div>
