@@ -57,128 +57,146 @@ export default function Services() {
     },
   ];
 
-  // 2x3 Educational Dashboard Grid Cards (matching user request)
+  // 2x3 Educational Dashboard Grid Cards with 3-in-1 Integrated Curriculum (Qawmi + Alia + School)
   const dashboardCards = [
     {
       id: "nursery",
-      title: "শিশু নার্সারি",
-      subtitle: "বর্ণমালা ও আনন্দের সাথে প্রাথমিক শিখন",
-      ageGroup: "প্লে ও নার্সারি • বয়স ৩-৫ বছর",
-      colorTheme: "orange",
-      borderGlow: "border-amber-500/50 shadow-[0_0_30px_rgba(245,158,11,0.22)] hover:border-amber-400 hover:shadow-[0_0_40px_rgba(245,158,11,0.4)]",
-      badgeBg: "bg-amber-500/20 text-amber-300 border-amber-500/40",
-      btnBg: "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950",
-      // Non-human/stylized Islamic learner iconography (Arabic alphabet block, learning tablet & graduation cap)
+      title: "শিশু ও নূরানী বিভাগ",
+      subtitle: "Qawmi Qaida-Ampara, Noorani Foundation & Play/Nursery",
+      levelBadge: "প্লে ও নার্সারি • বয়স ৩-৫ বছর",
+      borderGlow: "border-[#cfa852]/50 shadow-[0_0_25px_rgba(207,168,82,0.18)] hover:border-[#cfa852] hover:shadow-[0_0_35px_rgba(207,168,82,0.38)]",
+      badgeBg: "bg-amber-500/15 text-amber-300 border-amber-500/40",
+      btnBg: "bg-gradient-to-r from-amber-500 via-[#cfa852] to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold",
+      // Non-human/stylized Islamic learner iconography (Arabic alphabet block & educational tablet)
       iconContent: (
         <div className="relative w-16 h-16 flex items-center justify-center">
-          <div className="absolute inset-0 bg-amber-500/20 rounded-2xl blur-md"></div>
-          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400/90 to-amber-600 flex flex-col items-center justify-center text-slate-950 shadow-lg border border-amber-300/40">
+          <div className="absolute inset-0 bg-[#cfa852]/20 rounded-2xl blur-md"></div>
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-[#cfa852] flex flex-col items-center justify-center text-slate-950 shadow-lg border border-amber-200/50">
             <span className="font-arabic text-xl font-bold leading-none">أ ب ت</span>
-            <span className="text-[10px] font-extrabold uppercase tracking-wider mt-0.5">PLAY</span>
+            <span className="text-[9px] font-extrabold uppercase tracking-wider mt-0.5 font-sans">NURSERY</span>
           </div>
         </div>
       ),
-      features: ["সহজ বর্ণমালা ও ছড়া", "দ্বীনি আদব ও শিষ্টাচার", "আনন্দময় খেলাধুলা"],
+      features: [
+        "কওমি কায়দা ও আমপারা হিফজ ভিত্তি",
+        "নূরানী বিশুদ্ধ মাখরাজ ও তাজবিদ শিখন",
+        "প্লে ও নার্সারি আধুনিক সাধারণ জ্ঞান ও আদব"
+      ],
     },
     {
       id: "class-1-3",
-      title: "ক্লাস ১, ২, ৩",
-      subtitle: "মৌলিক বিষয়সমূহ, কুরআন ও নৈতিক ভিত্তি",
-      ageGroup: "প্রাথমিক স্তর • ক্লাস ১-৩",
-      colorTheme: "blue",
-      borderGlow: "border-sky-500/50 shadow-[0_0_30px_rgba(14,165,233,0.22)] hover:border-sky-400 hover:shadow-[0_0_40px_rgba(14,165,233,0.4)]",
-      badgeBg: "bg-sky-500/20 text-sky-300 border-sky-500/40",
-      btnBg: "bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-slate-950",
-      // Stylized non-human school kit (school bag, books stack, golden pencil)
+      title: "প্রাথমিক স্তর (ক্লাস ১ - ৩)",
+      subtitle: "Nazera Quran, Alia Ebtedayi & Primary School Curriculum",
+      levelBadge: "প্রাথমিক স্তর • ক্লাস ১-৩",
+      borderGlow: "border-[#cfa852]/50 shadow-[0_0_25px_rgba(207,168,82,0.18)] hover:border-[#cfa852] hover:shadow-[0_0_35px_rgba(207,168,82,0.38)]",
+      badgeBg: "bg-sky-500/15 text-sky-300 border-sky-500/40",
+      btnBg: "bg-gradient-to-r from-amber-500 via-[#cfa852] to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold",
+      // Stylized non-human school kit (crest, books stack, golden pencil)
       iconContent: (
         <div className="relative w-16 h-16 flex items-center justify-center">
           <div className="absolute inset-0 bg-sky-500/20 rounded-2xl blur-md"></div>
-          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-400/90 to-sky-600 flex items-center justify-center text-slate-950 shadow-lg border border-sky-300/40">
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center text-white shadow-lg border border-sky-300/40">
             <GraduationCap className="w-8 h-8 text-white drop-shadow" />
           </div>
         </div>
       ),
-      features: ["নাজেরা কুরআন শিক্ষা", "বাংলা, ইংরেজি ও গণিত", "দৈনন্দিন মাসনুন দোয়া"],
+      features: [
+        "দেখে দেখে পূর্ণাঙ্গ নাজেরা কুরআন তিলাওয়াত",
+        "আলিয়া ইবতেদায়ি সিলেবাসের পাঠ্যক্রম",
+        "প্রমিত বাংলা, গণিত ও বেসিক ইংলিশ স্পোকেন"
+      ],
     },
     {
       id: "class-4-5",
-      title: "ক্লাস ৪, ৫",
-      subtitle: "প্রাথমিক সমাপনী ও ইংরেজি-গণিত দক্ষতা",
-      ageGroup: "জুনিয়র প্রাইমারি • ক্লাস ৪-৫",
-      colorTheme: "orange",
-      borderGlow: "border-amber-500/50 shadow-[0_0_30px_rgba(245,158,11,0.22)] hover:border-amber-400 hover:shadow-[0_0_40px_rgba(245,158,11,0.4)]",
-      badgeBg: "bg-amber-500/20 text-amber-300 border-amber-500/40",
-      btnBg: "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950",
-      // Stylized globe, books & geometry ruler
+      title: "জুনিয়র প্রাথমিক (ক্লাস ৪ - ৫)",
+      subtitle: "Arabic Fundamentals, English-Math & Cadet/Scholarship Prep",
+      levelBadge: "জুনিয়র প্রাইমারি • ক্লাস ৪-৫",
+      borderGlow: "border-[#cfa852]/50 shadow-[0_0_25px_rgba(207,168,82,0.18)] hover:border-[#cfa852] hover:shadow-[0_0_35px_rgba(207,168,82,0.38)]",
+      badgeBg: "bg-amber-500/15 text-amber-300 border-amber-500/40",
+      btnBg: "bg-gradient-to-r from-amber-500 via-[#cfa852] to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold",
+      // Stylized globe, academic scholarship star & compass
       iconContent: (
         <div className="relative w-16 h-16 flex items-center justify-center">
           <div className="absolute inset-0 bg-amber-500/20 rounded-2xl blur-md"></div>
-          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400/90 to-amber-600 flex items-center justify-center text-slate-950 shadow-lg border border-amber-300/40">
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-white shadow-lg border border-amber-300/40">
             <Globe className="w-8 h-8 text-white drop-shadow" />
           </div>
         </div>
       ),
-      features: ["বৃত্তিমূলক প্রস্তুতি", "বেসিক স্পোকেন ইংলিশ", "সুন্দর হস্তাক্ষর ও তাজবিদ"],
+      features: [
+        "মৌলিক আরবি ভাষা ও ব্যাকরণ (নাহু-সরফ সূচনা)",
+        "এডভান্সড ইংলিশ ও গণিত দক্ষতা",
+        "ক্যাডেট কলেজ ও সরকারি বৃত্তি পরীক্ষা প্রস্তুতি"
+      ],
     },
     {
       id: "class-6-8",
-      title: "ক্লাস ৬, ৭, ৮",
-      subtitle: "গবেষণা, বিজ্ঞান ও উদ্ভাবনী পাঠ্যক্রম",
-      ageGroup: "জুনিয়র মাধ্যমিক • ক্লাস ৬-৮",
-      colorTheme: "blue",
-      borderGlow: "border-sky-500/50 shadow-[0_0_30px_rgba(14,165,233,0.22)] hover:border-sky-400 hover:shadow-[0_0_40px_rgba(14,165,233,0.4)]",
-      badgeBg: "bg-sky-500/20 text-sky-300 border-sky-500/40",
-      btnBg: "bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-slate-950",
-      // Books and Telescope (as explicitly requested)
+      title: "জুনিয়র মাধ্যমিক (ক্লাস ৬ - ৮)",
+      subtitle: "Qawmi Nahv-Sarf, Alia Dakhil Foundation & Science/ICT",
+      levelBadge: "জুনিয়র মাধ্যমিক • ক্লাস ৬-৮",
+      borderGlow: "border-[#cfa852]/50 shadow-[0_0_25px_rgba(207,168,82,0.18)] hover:border-[#cfa852] hover:shadow-[0_0_35px_rgba(207,168,82,0.38)]",
+      badgeBg: "bg-sky-500/15 text-sky-300 border-sky-500/40",
+      btnBg: "bg-gradient-to-r from-amber-500 via-[#cfa852] to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold",
+      // Books and Telescope (as requested)
       iconContent: (
         <div className="relative w-16 h-16 flex items-center justify-center">
           <div className="absolute inset-0 bg-sky-500/20 rounded-2xl blur-md"></div>
-          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-white shadow-lg border border-sky-300/40">
-            <Telescope className="w-8 h-8 text-sky-200 drop-shadow" />
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-indigo-700 flex items-center justify-center text-white shadow-lg border border-sky-300/40">
+            <Telescope className="w-8 h-8 text-sky-100 drop-shadow" />
           </div>
         </div>
       ),
-      features: ["বিজ্ঞান ও আইসিটি প্র্যাকটিস", "আরবি ব্যাকরণ ও ভাষা", "সৃজনশীল মেধা বিকাশ"],
+      features: [
+        "কওমি মিযান ও নাহবেমীর ব্যাকরণ চর্চা",
+        "আলিয়া দাখিল ফাউন্ডেশন বিষয়াবলি",
+        "আধুনিক সাধারণ বিজ্ঞান ও আইসিটি ল্যাব"
+      ],
     },
     {
       id: "class-9-10",
-      title: "ক্লাস ৯, ১০",
-      subtitle: "বোর্ড প্রস্তুতি, আইসিটি ও সাধারণ জ্ঞান",
-      ageGroup: "মাধ্যমিক স্তর • এসএসসি / দাখিল",
-      colorTheme: "orange",
-      borderGlow: "border-amber-500/50 shadow-[0_0_30px_rgba(245,158,11,0.22)] hover:border-amber-400 hover:shadow-[0_0_40px_rgba(245,158,11,0.4)]",
-      badgeBg: "bg-amber-500/20 text-amber-300 border-amber-500/40",
-      btnBg: "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950",
-      // Laptop and Globe (as explicitly requested)
+      title: "মাধ্যমিক স্তর (ক্লাস ৯ - ১০)",
+      subtitle: "Dakhil/SSC Combined Board Syllabus & Digital Lab",
+      levelBadge: "মাধ্যমিক স্তর • এসএসসি / দাখিল",
+      borderGlow: "border-[#cfa852]/50 shadow-[0_0_25px_rgba(207,168,82,0.18)] hover:border-[#cfa852] hover:shadow-[0_0_35px_rgba(207,168,82,0.38)]",
+      badgeBg: "bg-amber-500/15 text-amber-300 border-amber-500/40",
+      btnBg: "bg-gradient-to-r from-amber-500 via-[#cfa852] to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold",
+      // Laptop and Globe (as requested)
       iconContent: (
         <div className="relative w-16 h-16 flex items-center justify-center">
           <div className="absolute inset-0 bg-amber-500/20 rounded-2xl blur-md"></div>
-          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white shadow-lg border border-amber-300/40">
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-700 flex items-center justify-center text-white shadow-lg border border-amber-300/40">
             <Laptop className="w-8 h-8 text-amber-100 drop-shadow" />
           </div>
         </div>
       ),
-      features: ["পূর্ণাঙ্গ বোর্ড সিলেবাস", "ডিজিটাল ল্যাব ও কোডিং", "উচ্চতর গণিত ও বিজ্ঞান"],
+      features: [
+        "দাখিল ও এসএসসি সমন্বিত বোর্ড প্রস্তুতি",
+        "ইসলামিয়াত, বিজ্ঞান ও ব্যবসায় শিক্ষা",
+        "ডিজিটাল কম্পিউটার ল্যাব ও প্র্যাকটিক্যাল"
+      ],
     },
     {
       id: "hifz",
-      title: "হিফজুল কুরআন ভর্তি",
-      subtitle: "আন্তর্জাতিক তাজবিদ, শুনানী ও ক্বিরাত পাঠ্যক্রম",
-      ageGroup: "বিশেষ হিফজুল কুরআন শাখা",
-      colorTheme: "green",
-      borderGlow: "border-emerald-400/60 shadow-[0_0_35px_rgba(16,185,129,0.3)] hover:border-emerald-300 hover:shadow-[0_0_45px_rgba(16,185,129,0.5)]",
-      badgeBg: "bg-emerald-500/20 text-emerald-300 border-emerald-500/40",
-      btnBg: "bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white",
-      // Open Quran and Compass / Guidance beacon (as explicitly requested)
+      title: "আন্তর্জাতিক হিফজ ও শোনানী",
+      subtitle: "Tajweed, Daily Dawr, Sanad & Academic Balance",
+      levelBadge: "বিশেষ হিফজুল কুরআন শাখা",
+      borderGlow: "border-[#cfa852]/60 shadow-[0_0_30px_rgba(207,168,82,0.25)] hover:border-[#cfa852] hover:shadow-[0_0_40px_rgba(207,168,82,0.45)]",
+      badgeBg: "bg-emerald-500/15 text-emerald-300 border-emerald-500/40",
+      btnBg: "bg-gradient-to-r from-emerald-500 via-[#cfa852] to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-bold",
+      // Open Quran and Compass / Guidance beacon (as requested)
       iconContent: (
         <div className="relative w-16 h-16 flex items-center justify-center">
-          <div className="absolute inset-0 bg-emerald-500/30 rounded-2xl blur-md"></div>
-          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-800 flex items-center justify-center text-white shadow-lg border border-emerald-300/50">
-            <Compass className="w-8 h-8 text-[#cfa852] drop-shadow" />
+          <div className="absolute inset-0 bg-[#cfa852]/25 rounded-2xl blur-md"></div>
+          <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600 via-emerald-700 to-emerald-900 flex items-center justify-center text-white shadow-lg border border-[#cfa852]/50">
+            <Compass className="w-8 h-8 text-amber-300 drop-shadow" />
           </div>
         </div>
       ),
-      features: ["আন্তর্জাতিক তাজবিদ মান", "দৈনিক শুনানী ও দাওর", "সুললিত ক্বিরাত চর্চা"],
+      features: [
+        "আন্তর্জাতিক বিশ্বমানের বিশুদ্ধ তাজবিদ",
+        "দৈনিক শুনানী, নিয়মিত দাওর ও মুরাবাখা",
+        "হিফজ সমাপন সনদ ও জেনারেল ক্লাসের ভারসাম্য"
+      ],
     },
   ];
 
@@ -210,11 +228,11 @@ export default function Services() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         
-        {/* SECTION 1: Central Sparkling Headline & Subtitle (as explicitly requested) */}
+        {/* SECTION 1: Central Sparkling Headline & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-[#cfa852]/40 text-[#cfa852] text-xs sm:text-sm font-semibold mb-5 shadow-sm backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-[#cfa852]/40 text-[#cfa852] text-xs sm:text-sm font-semibold mb-4 shadow-sm backdrop-blur-md">
             <Sparkles className="w-4 h-4 text-amber-300 animate-spin" style={{ animationDuration: '6s' }} />
-            <span>আমাদের বিভাগসমূহ • ACADEMIC PROGRAMS</span>
+            <span>৩-ইন-১ সমন্বিত কারিকুলাম • কওমি + আলিয়া + ক্যাডেট/স্কুল</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 font-bengali">
@@ -224,38 +242,48 @@ export default function Services() {
           </h2>
 
           <p className="text-emerald-100/90 text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
-            ইসলামি মূল্যবোধ ও আধুনিক শিক্ষার সমন্বয়ে শিশু থেকে দশম শ্রেণি ও আন্তর্জাতিক হিফজুল কুরআনের বিশেষ পাঠ্যক্রম
+            কওমি মাদ্রাসার বিশুদ্ধ দ্বীনিয়াত, আলিয়া মাদ্রাসার বোর্ড সিলেবাস এবং আধুনিক ইংলিশ মিডিয়াম/ক্যাডেট স্কুলের যুগোপযোগী মান
           </p>
 
           <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-emerald-400 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        {/* SECTION 2: The 2x3 Grid of Interactive, Rounded-Corner Cards with Glowing Borders */}
+        {/* SECTION 2: The 2x3 Grid of Interactive, Rounded-Corner Cards with Golden Glowing Borders */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
           {dashboardCards.map((card) => (
             <div
               key={card.id}
-              className={`relative bg-slate-900/80 backdrop-blur-xl rounded-3xl p-6 sm:p-7 border transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group ${card.borderGlow}`}
+              className={`relative bg-slate-900/85 backdrop-blur-xl rounded-3xl p-6 sm:p-7 border transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between group ${card.borderGlow}`}
             >
-              {/* Card Header: Icon & Category Tag */}
               <div>
-                <div className="flex items-start justify-between mb-5">
+                {/* 3-in-1 Visual Curriculum Badge on Top of Each Card */}
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/15 via-[#cfa852]/20 to-emerald-500/15 border border-[#cfa852]/50 text-[#cfa852] text-[11px] sm:text-xs font-bold tracking-wide mb-4 w-fit shadow-sm">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
+                  <span>৩-ইন-১ সমন্বিত কারিকুলাম</span>
+                  <span className="text-white/30">|</span>
+                  <span className="text-emerald-200 text-[10px] sm:text-[11px] font-medium font-sans">Qawmi + Alia + School</span>
+                </div>
+
+                {/* Card Icon & Level Badge */}
+                <div className="flex items-start justify-between mb-4">
                   {card.iconContent}
                   <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${card.badgeBg}`}>
-                    {card.ageGroup}
+                    {card.levelBadge}
                   </span>
                 </div>
 
-                {/* Card Title & Subtitle */}
+                {/* Card Title */}
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
                   {card.title}
                 </h3>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6">
+
+                {/* Subtext container with English curriculum standard */}
+                <div className="inline-block text-[11px] sm:text-xs font-semibold text-amber-200/90 font-mono tracking-wide bg-white/5 border border-amber-400/20 px-2.5 py-1 rounded-lg mb-4 leading-relaxed">
                   {card.subtitle}
-                </p>
+                </div>
 
                 {/* Feature Bullet Points */}
-                <div className="space-y-2.5 mb-6 pt-4 border-t border-white/10 text-xs sm:text-sm text-emerald-100/90">
+                <div className="space-y-2 mb-6 pt-3.5 border-t border-white/10 text-xs sm:text-sm text-emerald-100/90">
                   {card.features.map((feat, fIdx) => (
                     <div key={fIdx} className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-[#cfa852] flex-shrink-0" />
@@ -367,101 +395,133 @@ export default function Services() {
           </div>
         </div>
 
-        {/* SECTION 5: "Kids' English" and "Spoken English Course" Cards (as explicitly requested) */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-amber-300 font-bengali">
-              বিশেষ ভাষা ও স্কিল ডেভেলপমেন্ট কোর্স
+        {/* SECTION 5: "ভাষা শিক্ষা (Language Learning)" */}
+        <div id="language-learning" className="mb-20 scroll-mt-24">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/15 border border-[#cfa852]/40 text-[#cfa852] text-xs sm:text-sm font-semibold mb-3 shadow-sm backdrop-blur-md">
+              <Languages className="w-4 h-4 text-amber-300" />
+              <span>আন্তর্জাতিক ভাষা শিক্ষা প্রোগ্রাম</span>
+            </div>
+            <h3 className="text-3xl sm:text-4xl font-extrabold text-amber-300 font-bengali">
+              ভাষা শিক্ষা (Language Learning)
             </h3>
-            <p className="text-sm text-emerald-100/80 mt-1">
-              কুরআন হিফজের পাশাপাশি আন্তর্জাতিক আরবি ও ইংরেজি ভাষায় ফ্লুয়েন্সি অর্জনের বিশেষ সুযোগ
+            <p className="text-sm sm:text-base text-emerald-100/80 mt-2 max-w-2xl mx-auto">
+              কুরআন অনুধাবন ও আন্তর্জাতিক যোগাযোগের সুবিধার্থে ইংরেজি ও আরবি ভাষার বিশেষ সমন্বিত প্রোগ্রাম
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {/* Card 1: Kids' English */}
-            <div className="bg-slate-900/80 backdrop-blur-xl rounded-3xl p-7 sm:p-8 border border-sky-500/40 shadow-[0_0_30px_rgba(14,165,233,0.2)] hover:border-sky-400 transition-all flex flex-col justify-between group">
+            {/* Card 1: ইংরেজি ভাষা শিক্ষা (English Language Program) */}
+            <div 
+              id="english-program"
+              className="bg-slate-900/85 backdrop-blur-xl rounded-3xl p-7 sm:p-8 border border-sky-500/40 shadow-[0_0_30px_rgba(14,165,233,0.2)] hover:border-sky-400 hover:shadow-[0_0_40px_rgba(14,165,233,0.35)] transition-all flex flex-col justify-between group scroll-mt-28"
+            >
               <div>
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-14 h-14 rounded-2xl bg-sky-500/20 text-sky-300 border border-sky-400/30 flex items-center justify-center">
-                    <Languages className="w-7 h-7" />
+                    <Globe className="w-7 h-7" />
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-bold bg-sky-500/20 text-sky-200 border border-sky-400/30">
-                    Kids' English Program
+                    ইংরেজি ভাষা শিক্ষা (English Program)
                   </span>
                 </div>
 
-                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-sky-300 transition-colors">
-                  Kids' English Foundation
-                </h4>
+                <div className="mb-3">
+                  <span className="text-xs font-bold text-sky-400 uppercase tracking-wider block mb-1">
+                    English Language Program
+                  </span>
+                  <h4 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-sky-300 transition-colors">
+                    Kids' English Foundation / Spoken English
+                  </h4>
+                </div>
+
                 <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  ছোট শিশুদের জন্য স্পোকেন ইংলিশ, নির্ভুল ফোনেটিক্স, ফনিক্স সাউন্ড এবং প্রাত্যহিক জীবনের আকর্ষণীয় ভোকাবুলারি শেখার বিশেষ কোর্স।
+                  ছোট শিশুদের ও সাধারণ শিক্ষার্থীদের জন্য স্পোকেন ইংলিশ, ব্রিটিশ ও আমেরিকান ফোনিক্স, ভিজ্যুয়াল ফ্ল্যাশটিউট এবং দৈনিক কথোপকথন শেখার বিশেষ কোর্স।
                 </p>
 
-                <div className="space-y-2.5 mb-6 pt-4 border-t border-white/10 text-xs sm:text-sm text-sky-100">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-400" />
-                    <span>ব্রিটিশ ও আমেরিকান স্ট্যান্ডার্ড ফনিক্স</span>
+                <div className="space-y-2.5 mb-8 pt-4 border-t border-white/10 text-xs sm:text-sm text-sky-100">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                    <span>ব্রিটিশ ও আমেরিকান স্ট্যান্ডার্ড ফোনিক্স</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-400" />
-                    <span>ভিজ্যুয়াল ফ্ল্যাশকার্ড ও অডিও অ্যাক্টিভিটি</span>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                    <span>ভিজ্যুয়াল ফ্ল্যাশকার্ড ও অডিও অ্যাক্টিভিটি</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-sky-400" />
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0" />
+                    <span>দৈনিক কথোপকথন ও প্রেজেন্টেশন প্র্যাকটিস</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0" />
                     <span>ছোট বয়সেই জড়তামুক্ত ইংরেজি কথা বলার আত্মবিশ্বাস</span>
                   </div>
                 </div>
               </div>
 
               <button
-                onClick={() => openAdmission("Kids' English")}
-                className="w-full py-3 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-slate-950 font-bold text-sm shadow-md transition"
+                onClick={() => openAdmission("ইংরেজি ভাষা শিক্ষা (English Program)")}
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-slate-950 font-bold text-sm shadow-md hover:shadow-lg transition cursor-pointer flex items-center justify-center gap-2"
               >
-                Kids' English কোর্সে ভর্তি হন
+                <span>ইংরেজি কোর্সে ভর্তি হন</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
 
-            {/* Card 2: Spoken English Course */}
-            <div className="bg-slate-900/80 backdrop-blur-xl rounded-3xl p-7 sm:p-8 border border-amber-500/40 shadow-[0_0_30px_rgba(245,158,11,0.2)] hover:border-amber-400 transition-all flex flex-col justify-between group">
+            {/* Card 2: আরবি ভাষা শিক্ষা (Arabic Language Program) */}
+            <div 
+              id="arabic-program"
+              className="bg-slate-900/85 backdrop-blur-xl rounded-3xl p-7 sm:p-8 border border-[#cfa852]/50 shadow-[0_0_30px_rgba(207,168,82,0.2)] hover:border-[#cfa852] hover:shadow-[0_0_40px_rgba(207,168,82,0.35)] transition-all flex flex-col justify-between group scroll-mt-28"
+            >
               <div>
                 <div className="flex items-start justify-between mb-5">
                   <div className="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-300 border border-amber-400/30 flex items-center justify-center">
-                    <Award className="w-7 h-7" />
+                    <span className="font-arabic text-2xl font-bold text-[#cfa852]">ع</span>
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-200 border border-amber-400/30">
-                    Spoken English & Arabic
+                    আরবি ভাষা শিক্ষা (Arabic Program)
                   </span>
                 </div>
 
-                <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
-                  Spoken English Course
-                </h4>
+                <div className="mb-3">
+                  <span className="text-xs font-bold text-[#cfa852] uppercase tracking-wider block mb-1 font-arabic">
+                    المحادثة العربية وقواعد اللغة
+                  </span>
+                  <h4 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-amber-300 transition-colors">
+                    আরবি কথোপকথন ও ব্যাকরণ (Spoken Arabic & Grammar)
+                  </h4>
+                </div>
+
                 <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                  হিফজ ও সাধারণ শাখার শিক্ষার্থীদের আন্তর্জাতিক স্তরে কার্যকর যোগাযোগের জন্য প্র্যাকটিক্যাল স্পোকেন ইংলিশ এবং আধুনিক আরবি কথোপকথন।
+                  কুরআন অনুধাবন ও আন্তর্জাতিক যোগাযোগের সুবিধার্থে আধুনিক আরবি ব্যাকরণ, স্পোকেন অ্যারাবিক (المحادثة العربية), সঠিক উচ্চারণ ও নিত্যদিনের প্রয়োজনীয় বাক্যাংশ শেখার বিশেষ কোর্স।
                 </p>
 
-                <div className="space-y-2.5 mb-6 pt-4 border-t border-white/10 text-xs sm:text-sm text-amber-100">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                    <span>দৈনন্দিন রিয়েল-লাইফ কনভারসেশন ল্যাব</span>
+                <div className="space-y-2.5 mb-8 pt-4 border-t border-white/10 text-xs sm:text-sm text-amber-100">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                    <span>শুদ্ধ আরবি উচ্চারণ ও প্র্যাকটিক্যাল কথোপকথন (Spoken Arabic)</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                    <span>পাবলিক স্পিকিং ও ইসলামিক প্রেজেন্টেশন</span>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                    <span>কুরআন ও হাদীসের ভাষা অনুধাবনের সহজ পদ্ধতি</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                    <span>কোর্স শেষে সনদপত্র ও দক্ষতা মূল্যায়ন</span>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                    <span>আধুনিক ও আন্তর্জাতিক মানের আরবি শব্দভাণ্ডার (Vocabulary)</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 flex-shrink-0" />
+                    <span>নিত্যপ্রয়োজনীয় আরবি বাক্য ও সংলাপ চর্চা</span>
                   </div>
                 </div>
               </div>
 
               <button
-                onClick={() => openAdmission('Spoken English Course')}
-                className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-md transition"
+                onClick={() => openAdmission("আরবি ভাষা শিক্ষা (Arabic Program)")}
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 via-[#cfa852] to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-md hover:shadow-lg transition cursor-pointer flex items-center justify-center gap-2"
               >
-                Spoken English কোর্সে ভর্তি হন
+                <span>আরবি কোর্সে ভর্তি হন</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
