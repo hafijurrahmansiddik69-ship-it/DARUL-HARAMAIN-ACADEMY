@@ -31,6 +31,26 @@ const About = () => {
               <h4 className="font-bold text-base mt-0.5">দারুল হারামাইন একাডেমি</h4>
               <p className="text-xs text-emerald-200 mt-1">বগুড়া, বাংলাদেশ</p>
             </div>
+
+            {/* Founder & Chairman Profile Card */}
+            <div className="w-full mt-3 p-3 bg-white rounded-2xl border border-emerald-100 flex items-center gap-3 text-left shadow-sm">
+              <div className="w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-amber-400 via-[#cfa852] to-emerald-600 flex-shrink-0 shadow">
+                <img
+                  src="https://res.cloudinary.com/dlklqihg6/image/upload/v1791964007/mvfdbk4sh4sp1jl7zruu.jpg"
+                  alt="হাফিজুর রহমান সিদ্দিক - প্রতিষ্ঠাতা ও চেয়ারম্যান"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover object-top rounded-full"
+                />
+              </div>
+              <div className="min-w-0">
+                <span className="text-[11px] font-semibold text-emerald-800 uppercase tracking-wider block">
+                  প্রতিষ্ঠাতা ও চেয়ারম্যান
+                </span>
+                <h5 className="text-sm font-bold text-slate-900 truncate">
+                  হাফিজুর রহমান সিদ্দিক
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
         
