@@ -343,7 +343,7 @@ export default function AdmissionModal() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
               <a
-                href={`https://wa.me/8801880800901?text=${whatsappMessage}`}
+                href={`https://wa.me/8801804500509?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition"

@@ -341,11 +341,11 @@ export default function Services() {
             </div>
             
             <a
-              href="tel:01880800901"
+              href="tel:01804500509"
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-300 hover:text-amber-200 transition-colors self-start md:self-auto"
             >
               <Phone className="w-4 h-4 text-[#cfa852]" />
-              <span>সরাসরি হটলাইন: 018 80 800 901</span>
+              <span>সরাসরি হটলাইন: 018 04 500 509</span>
             </a>
           </div>
 

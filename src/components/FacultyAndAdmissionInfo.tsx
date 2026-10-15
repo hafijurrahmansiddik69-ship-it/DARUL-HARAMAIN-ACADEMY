@@ -281,7 +281,7 @@ export default function FacultyAndAdmissionInfo() {
 
           <div className="bg-amber-50 rounded-2xl p-4 sm:p-6 border border-amber-200/80 text-center max-w-3xl mx-auto text-xs sm:text-sm text-amber-950">
             <p className="font-semibold">
-              ★ এতিম, অসচ্ছল ও প্রতিভাবান শিক্ষার্থীদের জন্য একাডেমির পক্ষ থেকে বিশেষ স্কলারশিপ ও ছাড়ের ব্যবস্থা রয়েছে। বিস্তারিত জানতে সরাসরি যোগাযোগ করুন: <strong className="font-mono text-emerald-900">018 80 800 901</strong>
+              ★ এতিম, অসচ্ছল ও প্রতিভাবান শিক্ষার্থীদের জন্য একাডেমির পক্ষ থেকে বিশেষ স্কলারশিপ ও ছাড়ের ব্যবস্থা রয়েছে। বিস্তারিত জানতে সরাসরি যোগাযোগ করুন: <strong className="font-mono text-emerald-900">018 04 500 509</strong>
             </p>
           </div>
         </div>

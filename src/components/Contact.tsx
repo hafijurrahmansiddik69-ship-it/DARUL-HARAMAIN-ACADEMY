@@ -119,7 +119,7 @@ export default function Contact() {
                 ২৪/৭ ভর্তি ও পরামর্শ সেবা
               </p>
               <p className="text-emerald-900 text-2xl font-extrabold tracking-wide font-mono">
-                018 80 800 901
+                018 04 500 509
               </p>
               <div className="mt-4 flex items-center gap-2 text-xs text-slate-500 pt-3 border-t border-slate-100">
                 <Phone className="w-4 h-4 text-emerald-600" />
@@ -129,7 +129,7 @@ export default function Contact() {
 
             <div className="mt-6 pt-4 border-t border-slate-100 flex gap-2">
               <a
-                href="https://wa.me/8801880800901"
+                href="https://wa.me/8801804500509"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-center text-xs font-bold transition shadow-sm"
@@ -137,7 +137,7 @@ export default function Contact() {
                 হোয়াটসঅ্যাপ
               </a>
               <a
-                href="tel:01880800901"
+                href="tel:01804500509"
                 className="flex-1 py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-center text-xs font-bold transition"
               >
                 সরাসরি কল
@@ -187,7 +187,7 @@ export default function Contact() {
 
             <div className="relative z-10 pt-8 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-amber-200/80">
               <span>শাখা: বগুড়া, বাংলাদেশ</span>
-              <span>ভর্তি হটলাইন: 018 80 800 901</span>
+              <span>ভর্তি হটলাইন: 018 04 500 509</span>
             </div>
           </div>
 

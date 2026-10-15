@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="mt-4 space-y-1.5 text-xs text-gray-300">
             <p><span className="text-amber-300">ঠিকানা:</span> গুজিয়া, মোকামতলা ও শিবগঞ্জ, বগুড়া, Bangladesh</p>
             <p><span className="text-amber-300">মেইল:</span> <a href="mailto:darulharamainacademy@gmail.com" className="hover:text-white transition-colors">darulharamainacademy@gmail.com</a></p>
-            <p><span className="text-amber-300">হটলাইন:</span> <a href="tel:01880800901" className="hover:text-white transition-colors font-mono font-bold">018 80 800 901</a></p>
+            <p><span className="text-amber-300">হটলাইন:</span> <a href="tel:01804500509" className="hover:text-white transition-colors font-mono font-bold">018 04 500 509</a></p>
           </div>
         </div>
         <div>

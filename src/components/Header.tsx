@@ -284,11 +284,11 @@ export default function Header() {
               </a>
               <span className="text-emerald-700/80 hidden sm:inline">|</span>
               <a 
-                href="tel:01880800901" 
+                href="tel:01804500509" 
                 className="flex items-center gap-1.5 hover:text-[#cfa852] transition-colors font-mono font-semibold"
               >
                 <Phone className="w-3.5 h-3.5 text-[#cfa852] flex-shrink-0" />
-                <span>018 80 800 901</span>
+                <span>018 04 500 509</span>
               </a>
             </div>
           </div>
@@ -544,9 +544,9 @@ export default function Header() {
               <MapPin className="w-3 h-3 text-[#cfa852]" />
               <span>বগুড়া ক্যাম্পাস</span>
             </span>
-            <a href="tel:01880800901" className="flex items-center gap-1 font-mono text-amber-300 font-bold hover:underline">
+            <a href="tel:01804500509" className="flex items-center gap-1 font-mono text-amber-300 font-bold hover:underline">
               <Phone className="w-3 h-3 text-[#cfa852]" />
-              <span>018 80 800 901</span>
+              <span>018 04 500 509</span>
             </a>
           </div>
         </div>
