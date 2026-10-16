@@ -1,144 +1,293 @@
 import React, { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { 
   GraduationCap, 
   BookOpen, 
-  Sparkles, 
-  ChevronRight, 
   Award, 
   Layers, 
-  HeartHandshake,
+  Heart,
   Languages,
-  X
+  X,
+  CheckCircle2,
+  PhoneCall,
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 import { useAdmission } from '../context/AdmissionContext';
 
-interface ActionButton {
+interface ModalContent {
+  subtitle: string;
+  description: string;
+  bulletPoints: string[];
+  primaryActionLabel: string;
+  onPrimaryAction: () => void;
+  secondaryActionLabel?: string;
+  onSecondaryAction?: () => void;
+}
+
+interface FeatureCardItem {
   id: string;
+  tag: string;
   title: string;
-  badge: string;
   icon: React.ElementType;
-  onClick: () => void;
-  isPrimaryAccent?: boolean;
-  gradientBg: string;
-  iconBg: string;
-  borderClass: string;
-  hoverGlow: string;
-  textColor: string;
-  badgeStyle: string;
-  arrowStyle: string;
+  accentName: string;
+  innerGradient: string;
+  borderColor: string;
+  glowShadow: string;
+  glowHover: string;
+  ambientGlow: string;
+  modal: ModalContent;
 }
 
 const Hero: React.FC = () => {
   const { openAdmission } = useAdmission();
-  const [showLanguageModal, setShowLanguageModal] = useState(false);
+  const [selectedCard, setSelectedCard] = useState<FeatureCardItem | null>(null);
 
   const handleScrollToSection = (targetId: string) => {
+    setSelectedCard(null);
     const el = document.getElementById(targetId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const handleScrollToLanguage = (targetId: string) => {
-    setShowLanguageModal(false);
-    const el = document.getElementById(targetId) || document.getElementById('academic-programs');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // =========================================================================
+  // 6 FEATURE CARDS (Exact Zikrullah Foundation Card Design & Proportions)
+  // Column 1 (Left Side): Card 1 -> Card 2 -> Card 3
+  // Column 2 (Right Side): Card 4 -> Card 5 -> Card 6
+  // =========================================================================
 
-  // 10 MINUTE SCHOOL STYLE: 6 ACTION BUTTONS GRID (2 Rows of 3 Buttons)
-  const actionButtons: ActionButton[] = [
-    // Top Row: 3 Core Academy CTAs
+  const column1Cards: FeatureCardItem[] = [
+    // Card 1 (Yellow / Amber Gradient)
     {
       id: 'online-admission',
+      tag: 'ভর্তি চলছে',
       title: 'অনলাইন ভর্তি',
-      badge: 'ভর্তি চলছে',
       icon: GraduationCap,
-      onClick: () => openAdmission(),
-      isPrimaryAccent: true,
-      gradientBg: 'bg-gradient-to-r from-amber-400 via-amber-500 to-[#cfa852] hover:from-amber-300 hover:via-amber-400 hover:to-amber-500',
-      iconBg: 'bg-slate-950 text-amber-400 shadow-md',
-      borderClass: 'border-amber-300 shadow-xl shadow-amber-500/25 hover:border-amber-200',
-      hoverGlow: 'hover:shadow-[0_0_30px_rgba(245,158,11,0.5)]',
-      textColor: 'text-slate-950 font-extrabold',
-      badgeStyle: 'bg-slate-950/20 text-slate-950 font-bold',
-      arrowStyle: 'bg-slate-950/20 group-hover:bg-slate-950/30 text-slate-950'
+      accentName: 'Yellow / Amber',
+      innerGradient: 'from-[#d97706] via-[#f59e0b] to-[#fbbf24]',
+      borderColor: 'border-[#f59e0b]',
+      glowShadow: 'shadow-[0_0_18px_rgba(245,158,11,0.28)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(245,158,11,0.55)]',
+      ambientGlow: 'from-amber-500/30',
+      modal: {
+        subtitle: 'দারুল হারামাইন একাডেমি - সেশন ২০২৫-২০২৬',
+        description: 'প্লে-গ্রুপ থেকে দাখিল ও হিফজ বিভাগে নতুন শিক্ষাবর্ষে শিক্ষার্থী ভর্তি চলছে। মেধা ও নৈতিকতার অনন্য মেলবন্ধনে আপনার সন্তানের আলোকিত দ্বীনি ও আধুনিক ভবিষ্যৎ নিশ্চিত করুন।',
+        bulletPoints: [
+          'প্লে, কেজি, ১ম-১০ম শ্রেণি ও নূরানী-হিফজ বিভাগে সীমিত আসনে সরাসরি ভর্তি।',
+          'সহজ অনলাইন ফরম পূরণ এবং তাৎক্ষণিক রেজিস্ট্রেশন কনফার্মেশন সুবিধা।',
+          'মেধাবী, হাফেজ ও অসচ্ছল পরিবারের সন্তানদের জন্য বিশেষ স্কলারশিপের ব্যবস্থা।',
+          'ভর্তি বিষয়ক যেকোনো তথ্যের জন্য সার্বক্ষণিক হেল্পলাইন: 018 04 500 509'
+        ],
+        primaryActionLabel: 'ভর্তি ফরম পূরণ করুন',
+        onPrimaryAction: () => {
+          setSelectedCard(null);
+          openAdmission();
+        },
+        secondaryActionLabel: 'কল করুন: 018 04 500 509',
+        onSecondaryAction: () => {
+          window.open('tel:01804500509');
+        }
+      }
     },
-    {
-      id: 'departments',
-      title: 'আমাদের বিভাগসমূহ',
-      badge: 'প্লে থেকে দাখিল',
-      icon: BookOpen,
-      onClick: () => handleScrollToSection('academic-programs'),
-      gradientBg: 'bg-gradient-to-r from-emerald-900/60 via-slate-900/70 to-emerald-950/80 hover:from-emerald-800/70 hover:via-slate-800/80 hover:to-emerald-900/90',
-      iconBg: 'bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-md',
-      borderClass: 'border-emerald-500/35 hover:border-[#cfa852]/70',
-      hoverGlow: 'hover:shadow-[0_0_25px_rgba(16,185,129,0.3)]',
-      textColor: 'text-white group-hover:text-amber-200',
-      badgeStyle: 'bg-white/10 text-emerald-200/90 font-semibold',
-      arrowStyle: 'bg-white/10 group-hover:bg-white/20 text-white/80 group-hover:text-white'
-    },
+    // Card 2 (Orange Accent - Placed directly under 'অনলাইন ভর্তি')
     {
       id: 'language-courses',
+      tag: 'ইংরেজি ও আরবি',
       title: 'ভাষা শিক্ষা কোর্স',
-      badge: 'ইংরেজি ও আরবি',
       icon: Languages,
-      onClick: () => setShowLanguageModal(true),
-      gradientBg: 'bg-gradient-to-r from-teal-900/60 via-slate-900/70 to-emerald-950/80 hover:from-teal-800/70 hover:via-slate-800/80 hover:to-teal-900/90',
-      iconBg: 'bg-gradient-to-br from-[#cfa852] to-amber-600 text-slate-950 shadow-md',
-      borderClass: 'border-[#cfa852]/40 hover:border-amber-300',
-      hoverGlow: 'hover:shadow-[0_0_25px_rgba(207,168,82,0.35)]',
-      textColor: 'text-white group-hover:text-[#cfa852]',
-      badgeStyle: 'bg-amber-400/15 text-amber-300 font-semibold',
-      arrowStyle: 'bg-white/10 group-hover:bg-white/20 text-white/80 group-hover:text-white'
+      accentName: 'Orange Accent',
+      innerGradient: 'from-[#ea580c] via-[#f97316] to-[#fb923c]',
+      borderColor: 'border-[#f97316]',
+      glowShadow: 'shadow-[0_0_18px_rgba(249,115,22,0.28)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(249,115,22,0.55)]',
+      ambientGlow: 'from-orange-500/30',
+      modal: {
+        subtitle: 'আন্তর্জাতিক মানের দ্বিভাষিক কমিউনিকেশন স্কিল',
+        description: 'ইংরেজি ও আরবি—বিশ্বের সবচেয়ে গুরুত্বপূর্ণ দুটি ভাষায় সাবলীল দক্ষতা অর্জনের জন্য দারুল হারামাইন একাডেমির বিশেষ পাঠ্যক্রম ও ল্যাঙ্গুয়েজ ল্যাব।',
+        bulletPoints: [
+          'স্পোকেন ইংলিশ (Spoken English): ব্রিটিশ ও আমেরিকান ফোনেটিক্স, কারেক্ট প্রোনাউন্সিয়েশন ও প্রেজেন্টেশন।',
+          'মুহাদাসা ও আরবি ভাষা (Spoken Arabic): আসমানি ওহী ও কুরআন বোঝার জন্য বিশুদ্ধ আরবি কথোপকথন।',
+          'মাল্টিমিডিয়া ল্যাব ও অডিও ভিজ্যুয়াল প্র্যাকটিসের মাধ্যমে শিশুকাল থেকেই জড়তাহীন উচ্চারণ।',
+          'দেশসেরা ও আন্তর্জাতিক অভিজ্ঞতা সম্পন্ন শিক্ষকমণ্ডলী দ্বারা নিবিড় পাঠদান।'
+        ],
+        primaryActionLabel: 'একাডেমিক বিভাগে বিস্তারিত দেখুন',
+        onPrimaryAction: () => handleScrollToSection('academic-programs'),
+        secondaryActionLabel: 'কোর্সে ভর্তি আবেদন',
+        onSecondaryAction: () => {
+          setSelectedCard(null);
+          openAdmission();
+        }
+      }
     },
-
-    // Bottom Row: 3 Quick Action / Feature Style Buttons
-    {
-      id: 'noorani-hifz',
-      title: 'নূরানী হিফজ ও তাজবীদ',
-      badge: 'আন্তর্জাতিক মান',
-      icon: Award,
-      onClick: () => handleScrollToSection('academic-programs'),
-      gradientBg: 'bg-gradient-to-r from-amber-500/20 via-yellow-600/15 to-slate-950/70 hover:from-amber-500/30 hover:via-yellow-600/25 hover:to-slate-900/80',
-      iconBg: 'bg-gradient-to-br from-amber-400 via-[#cfa852] to-amber-600 text-slate-950 shadow-md',
-      borderClass: 'border-amber-400/40 hover:border-amber-300',
-      hoverGlow: 'hover:shadow-[0_0_25px_rgba(245,158,11,0.35)]',
-      textColor: 'text-white group-hover:text-amber-200',
-      badgeStyle: 'bg-amber-400/15 text-amber-300 font-semibold',
-      arrowStyle: 'bg-white/10 group-hover:bg-white/20 text-white/80 group-hover:text-white'
-    },
+    // Card 3 (Bright Emerald Green Gradient)
     {
       id: '3-in-1-curriculum',
+      tag: 'কওমি • আলিয়া • জেনারেল',
       title: '3-in-1 সমন্বিত শিক্ষাক্রম',
-      badge: 'কওমি • আলিয়া • জেনারেল',
       icon: Layers,
-      onClick: () => handleScrollToSection('academic-programs'),
-      gradientBg: 'bg-gradient-to-r from-cyan-500/20 via-sky-600/15 to-slate-950/70 hover:from-cyan-500/30 hover:via-sky-600/25 hover:to-slate-900/80',
-      iconBg: 'bg-gradient-to-br from-cyan-400 via-sky-500 to-blue-600 text-white shadow-md',
-      borderClass: 'border-cyan-400/40 hover:border-cyan-300',
-      hoverGlow: 'hover:shadow-[0_0_25px_rgba(6,182,212,0.35)]',
-      textColor: 'text-white group-hover:text-cyan-200',
-      badgeStyle: 'bg-cyan-400/15 text-cyan-300 font-semibold',
-      arrowStyle: 'bg-white/10 group-hover:bg-white/20 text-white/80 group-hover:text-white'
-    },
-    {
-      id: 'sunnah-tarbiyah',
-      title: 'সুন্নাহভিত্তিক তারবিয়াত',
-      badge: 'আখলাক ও চরিত্র গঠন',
-      icon: HeartHandshake,
-      onClick: () => handleScrollToSection('about'),
-      gradientBg: 'bg-gradient-to-r from-emerald-500/20 via-teal-600/15 to-slate-950/70 hover:from-emerald-500/30 hover:via-teal-600/25 hover:to-slate-900/80',
-      iconBg: 'bg-gradient-to-br from-emerald-400 via-teal-500 to-emerald-700 text-white shadow-md',
-      borderClass: 'border-emerald-400/40 hover:border-emerald-300',
-      hoverGlow: 'hover:shadow-[0_0_25px_rgba(16,185,129,0.35)]',
-      textColor: 'text-white group-hover:text-emerald-200',
-      badgeStyle: 'bg-emerald-400/15 text-emerald-300 font-semibold',
-      arrowStyle: 'bg-white/10 group-hover:bg-white/20 text-white/80 group-hover:text-white'
+      accentName: 'Bright Emerald Green',
+      innerGradient: 'from-[#059669] via-[#10b981] to-[#34d399]',
+      borderColor: 'border-[#10b981]',
+      glowShadow: 'shadow-[0_0_18px_rgba(16,185,129,0.28)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.55)]',
+      ambientGlow: 'from-emerald-500/30',
+      modal: {
+        subtitle: 'ঐতিহ্য ও আধুনিকতার অনন্য ত্রিবেণী সংগম',
+        description: 'কওমির গভীর দ্বীনি বুনিয়াদ, আলিয়ার সরকারি কারিকুলাম এবং আধুনিক বিজ্ঞান ও সাধারণ শিক্ষার যুগোপযোগী সমন্বয়। আমাদের লক্ষ্য একাধারে বিজ্ঞ আলেম ও যোগ্য আধুনিক নাগরিক গড়ে তোলা।',
+        bulletPoints: [
+          'কওমি নেসাব: সহীহ তাজবীদ, কায়েদা, ফিকহ ও মৌলিক ইসলামি জীবনবিধানের পূর্ণাঙ্গ শিক্ষা।',
+          'আলিয়া সিলেবাস: সরকারি মাদরাসা শিক্ষা বোর্ডের অনুমোদিত পাঠ্যক্রম ও সার্টিফিকেট।',
+          'জেনারেল এডুকেশন: জাতীয় শিক্ষাক্রম অনুসারে গণিত, বিজ্ঞান, ইংরেজি, সমাজ ও আইসিটি।',
+          'একই সাথে বহুমুখী ক্ষেত্রে নেতৃত্ব দেওয়ার মতো সুষম ও শক্তিশালী ভিত্তি গঠন।'
+        ],
+        primaryActionLabel: 'সিলেবাস ও পাঠ্যক্রম দেখুন',
+        onPrimaryAction: () => handleScrollToSection('academic-programs'),
+        secondaryActionLabel: 'অনলাইন ভর্তি',
+        onSecondaryAction: () => {
+          setSelectedCard(null);
+          openAdmission();
+        }
+      }
     }
   ];
+
+  const column2Cards: FeatureCardItem[] = [
+    // Card 4 (Cyan / Ocean Blue Gradient)
+    {
+      id: 'departments',
+      tag: 'প্লে থেকে দাখিল',
+      title: 'আমাদের বিভাগসমূহ',
+      icon: BookOpen,
+      accentName: 'Cyan / Ocean Blue',
+      innerGradient: 'from-[#0284c7] via-[#0ea5e9] to-[#38bdf8]',
+      borderColor: 'border-[#0ea5e9]',
+      glowShadow: 'shadow-[0_0_18px_rgba(14,165,233,0.28)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(14,165,233,0.55)]',
+      ambientGlow: 'from-cyan-500/30',
+      modal: {
+        subtitle: 'বয়সভিত্তিক সুবিন্যস্ত ও যুগোপযোগী বিভাগসমূহ',
+        description: 'দারুল হারামাইন একাডেমিতে প্রতিটি শ্রেণির শিক্ষার্থীর বয়স ও মানসিক বিকাশ বিবেচনা করে আলাদা বিভাগীয় অবকাঠামো ও শিক্ষাপদ্ধতি পরিচালনা করা হয়।',
+        bulletPoints: [
+          'প্লে-গ্রুপ ও কিন্ডারগার্টেন: খেলনা, চার্ট ও আনন্দময় পরিবেশে বর্ণমালা ও নূরানী অক্ষরের হাতেখড়ি।',
+          'প্রাথমিক বিভাগ (১ম-৫ম শ্রেণি): জাতীয় পাঠ্যক্রমের সাথে আরবি ভাষা ও হিফজের প্রাথমিক প্রস্তুতি।',
+          'জুনিয়র ও দাখিল বিভাগ (৬ষ্ঠ-১০ম শ্রেণি): বোর্ড পরীক্ষা প্রস্তুতি ও উচ্চতর ইসলামি স্টাডিজ।',
+          'সম্পূর্ণ পর্দা ও সুন্নাহসম্মত নিরাপদ পরিবেশে ছাত্র ও ছাত্রীদের সম্পূর্ণ পৃথক ক্যাম্পাস।'
+        ],
+        primaryActionLabel: 'সকল বিভাগ পর্যালোচনা করুন',
+        onPrimaryAction: () => handleScrollToSection('academic-programs'),
+        secondaryActionLabel: 'ভর্তি প্রক্রিয়া জানুন',
+        onSecondaryAction: () => {
+          setSelectedCard(null);
+          openAdmission();
+        }
+      }
+    },
+    // Card 5 (Warm Golden / Yellow Gradient Accent)
+    {
+      id: 'noorani-hifz',
+      tag: 'আন্তর্জাতিক মান',
+      title: 'নূরানী হিফজ ও তাজবীদ',
+      icon: Award,
+      accentName: 'Warm Golden / Yellow',
+      innerGradient: 'from-[#ca8a04] via-[#eab308] to-[#fde047]',
+      borderColor: 'border-[#eab308]',
+      glowShadow: 'shadow-[0_0_18px_rgba(234,179,8,0.28)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(234,179,8,0.55)]',
+      ambientGlow: 'from-yellow-500/30',
+      modal: {
+        subtitle: 'বিশুদ্ধ মাখরাজ, মিষ্টি সুর ও আন্তর্জাতিক মানের হিফজ প্রোগ্রাম',
+        description: 'দেশ-বিদেশের অভিজ্ঞ ও আন্তর্জাতিক সনদপ্রাপ্ত হুফফাজে কেরামের প্রত্যক্ষ তত্ত্বাবধানে তাজবীদ ও তারতীলের সাথে পবিত্র কুরআনুল কারীম হিফজ করার বিশেষ ব্যবস্থা।',
+        bulletPoints: [
+          'আন্তর্জাতিক মানসম্মত হুফফাজ দ্বারা প্রতি চরণের বিশুদ্ধ মাখরাজ ও সুর প্রশিক্ষণ।',
+          '১ থেকে ৩ বছরের বিশেষ নিবিড় হিফজ প্রোগ্রাম ও শক্তিশালী রিভিশন (দৌর) পদ্ধতি।',
+          'হিফজ চলাকালীন সাধারণ শিক্ষার ধারাবাহিকতা রক্ষা—যাতে পরবর্তী ক্লাসে কোনো পিছিয়ে না পড়ে।',
+          'শীতাতপ নিয়ন্ত্রিত, শব্দমুক্ত হিফজখানা ও সার্বক্ষণিক স্বাস্থ্য পর্যবেক্ষণ।'
+        ],
+        primaryActionLabel: 'হিফজ বিভাগে আবেদন করুন',
+        onPrimaryAction: () => {
+          setSelectedCard(null);
+          openAdmission();
+        },
+        secondaryActionLabel: 'হটলাইনে কথা বলুন',
+        onSecondaryAction: () => {
+          window.open('tel:01804500509');
+        }
+      }
+    },
+    // Card 6 (Teal / Mint Green Gradient Accent)
+    {
+      id: 'sunnah-tarbiyah',
+      tag: 'আখলাক ও চরিত্র গঠন',
+      title: 'সুন্নাহভিত্তিক তারবিয়াত',
+      icon: Heart,
+      accentName: 'Teal / Mint Green',
+      innerGradient: 'from-[#0d9488] via-[#14b8a6] to-[#5eead4]',
+      borderColor: 'border-[#14b8a6]',
+      glowShadow: 'shadow-[0_0_18px_rgba(20,184,166,0.28)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(20,184,166,0.55)]',
+      ambientGlow: 'from-teal-500/30',
+      modal: {
+        subtitle: 'আদর্শ চরিত্র ও আত্মিক পরিশুদ্ধির জীবন্ত পাঠশালা',
+        description: 'শুধু পুঁথিগত শিক্ষাই যথেষ্ট নয়; রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের অনুপম চরিত্র ও আদবের বাস্তব প্রতিফলনে গড়ে তোলা হয় প্রতিটি শিক্ষার্থীর নৈতিক সত্ত্বা।',
+        bulletPoints: [
+          'প্রাত্যহিক জীবনের ২৪ ঘণ্টার সুন্নাহ, আদাব ও মাসনুন দোয়ার বাস্তব অনুশীলন।',
+          'পাঁচ ওয়াক্ত সালাত জামাতে আদায় ও তাকওয়াভিত্তিক মানসিকতা গঠন।',
+          'মোবাইল আসক্তি ও অনৈতিক অপসংস্কৃতি মুক্ত পবিত্র ক্যাম্পাস পরিবেশ।',
+          'নিয়মিত অভিভাবক-শিক্ষক মতবিনিময় ও পরিবারভিত্তিক তারবিয়াত কাউন্সেলিং।'
+        ],
+        primaryActionLabel: 'আমাদের লক্ষ্য ও দর্শন জানুন',
+        onPrimaryAction: () => handleScrollToSection('about'),
+        secondaryActionLabel: 'ভর্তি ফরম পূরণ করুন',
+        onSecondaryAction: () => {
+          setSelectedCard(null);
+          openAdmission();
+        }
+      }
+    }
+  ];
+
+  // Render a Single Feature Card matching Zikrullah Foundation visual style exactly
+  const renderCard = (card: FeatureCardItem) => {
+    const IconComp = card.icon;
+    return (
+      <div
+        key={card.id}
+        onClick={() => setSelectedCard(card)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setSelectedCard(card);
+          }
+        }}
+        className={`group relative flex flex-col justify-between overflow-hidden rounded-[20px] sm:rounded-[24px] md:rounded-[28px] bg-[#071712] border-2 ${card.borderColor} ${card.glowShadow} ${card.glowHover} transition-all duration-300 ease-out transform hover:-translate-y-1 sm:hover:-translate-y-1.5 hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-center p-2 sm:p-2.5 md:p-3 select-none`}
+      >
+        {/* Top Inner Gradient Box */}
+        <div 
+          className={`w-full rounded-[14px] sm:rounded-[18px] md:rounded-[20px] bg-gradient-to-b ${card.innerGradient} py-3 sm:py-4.5 md:py-6 px-1.5 sm:px-3 flex flex-col items-center justify-center shadow-md group-hover:brightness-105 transition-all duration-300`}
+        >
+          {/* Tag at Top of Inner Box */}
+          <span className="text-white font-bold text-[11px] sm:text-xs md:text-sm font-bengali tracking-wide drop-shadow-sm mb-1.5 sm:mb-2 text-center line-clamp-1">
+            {card.tag}
+          </span>
+
+          {/* Center Icon */}
+          <div className="text-white drop-shadow-md group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+            <IconComp className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" strokeWidth={2.2} />
+          </div>
+        </div>
+
+        {/* Bottom Dark Area: Main Title */}
+        <div className="w-full pt-2 sm:pt-2.5 md:pt-3.5 pb-1 sm:pb-1.5 px-1 flex items-center justify-center">
+          <h3 className="text-white font-extrabold text-[12px] sm:text-sm md:text-base lg:text-lg font-bengali group-hover:text-amber-200 transition-colors tracking-tight text-center line-clamp-1 sm:line-clamp-2">
+            {card.title}
+          </h3>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <section className="relative text-white overflow-hidden bg-emerald-950">
@@ -223,147 +372,138 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* 10 MINUTE SCHOOL STYLE: COMPLETE GRID OF 6 ACTION BUTTONS (2 Rows of 3) */}
-        <div className="w-full max-w-5xl mx-auto mb-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 md:gap-4.5">
-            {actionButtons.map((btn) => {
-              const IconComp = btn.icon;
-              return (
-                <button
-                  key={btn.id}
-                  onClick={btn.onClick}
-                  className={`group relative flex items-center justify-between p-3.5 sm:p-4 rounded-2xl ${btn.gradientBg} ${btn.borderClass} ${btn.hoverGlow} border backdrop-blur-xl transition-all duration-300 transform hover:-translate-y-1 text-left cursor-pointer shadow-lg w-full`}
-                >
-                  {/* Subtle top indicator glow highlight */}
-                  <div className={`absolute top-0 left-6 right-6 h-[1.5px] bg-gradient-to-r from-transparent ${btn.isPrimaryAccent ? 'via-white/70' : 'via-white/40'} to-transparent opacity-40 group-hover:opacity-100 transition-opacity`}></div>
+        {/* =========================================================================
+            2-COLUMN FEATURE CARD SECTION (Zikrullah Foundation Exact Style)
+            - 2 columns on ALL devices (Mobile, Tablet, Desktop) just like the screenshot!
+            - Column 1: অনলাইন ভর্তি -> ভাষা শিক্ষা কোর্স -> 3-in-1 সমন্বিত শিক্ষাক্রম
+            - Column 2: আমাদের বিভাগসমূহ -> নূরানী হিফজ ও তাজবীদ -> সুন্নাহভিত্তিক তারবিয়াত
+            - Clicking any card opens a detailed popup/modal with full information
+            ========================================================================= */}
+        <div className="w-full max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto mb-6 px-1">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-5">
+            {/* Column 1 (Left Side Stack) */}
+            <div className="flex flex-col gap-2.5 sm:gap-4 md:gap-5">
+              {column1Cards.map((card) => renderCard(card))}
+            </div>
 
-                  {/* Left: Compact Glowing Icon Box + Text Details */}
-                  <div className="flex items-center gap-3 min-w-0 pr-1">
-                    <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl ${btn.iconBg} flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-105 group-hover:rotate-2 transition-transform duration-300`}>
-                      <IconComp className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow" />
-                    </div>
-
-                    <div className="min-w-0">
-                      {/* Top Tiny Badge / Tag */}
-                      <div className="flex items-center gap-1.5 mb-0.5">
-                        <span className={`text-[10px] sm:text-[11px] px-1.5 py-0.5 rounded-md ${btn.badgeStyle} uppercase tracking-wider`}>
-                          {btn.badge}
-                        </span>
-                      </div>
-
-                      {/* Main Title */}
-                      <h4 className={`text-sm sm:text-base font-bold tracking-tight truncate font-bengali ${btn.textColor} transition-colors`}>
-                        {btn.title}
-                      </h4>
-                    </div>
-                  </div>
-
-                  {/* Right: Subtle Action Arrow */}
-                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg ${btn.arrowStyle} flex items-center justify-center flex-shrink-0 transition-all duration-200`}>
-                    <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-                  </div>
-                </button>
-              );
-            })}
+            {/* Column 2 (Right Side Stack) */}
+            <div className="flex flex-col gap-2.5 sm:gap-4 md:gap-5">
+              {column2Cards.map((card) => renderCard(card))}
+            </div>
           </div>
         </div>
 
-        {/* Glassmorphism Dark Pop-up Modal for Language Courses Selection */}
-        {showLanguageModal && (
-          <div 
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-fade-in"
-            onClick={() => setShowLanguageModal(false)}
-          >
-            <div 
-              className="relative w-full max-w-lg bg-slate-950/95 border border-[#cfa852]/50 rounded-3xl p-6 sm:p-8 shadow-[0_0_50px_rgba(6,78,59,0.6)] text-left backdrop-blur-2xl"
-              onClick={(e) => e.stopPropagation()}
+        {/* =========================================================================
+            DETAILED POPUP / MODAL (Opens for any clicked card with full info)
+            - Clean X button
+            - Blurred backdrop
+            - Matching vibrant gradient header banner & glowing theme
+            - Bullet point details, highlights, and direct action triggers
+            ========================================================================= */}
+        <AnimatePresence>
+          {selectedCard && (
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
+              onClick={() => setSelectedCard(null)}
             >
-              {/* Modal Header */}
-              <div className="flex items-start justify-between pb-4 border-b border-white/10 mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-[#cfa852] border border-[#cfa852]/40 flex items-center justify-center">
-                    <Languages className="w-6 h-6" />
+              <motion.div 
+                initial={{ scale: 0.95, opacity: 0, y: 15 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.95, opacity: 0, y: 15 }}
+                transition={{ type: "spring", duration: 0.35, bounce: 0.15 }}
+                className={`relative w-full max-w-lg bg-[#071712] border-2 ${selectedCard.borderColor} rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.85)] text-left backdrop-blur-2xl max-h-[90vh] flex flex-col`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Colorful Gradient Top Banner */}
+                <div className={`h-3 w-full bg-gradient-to-r ${selectedCard.innerGradient} flex-shrink-0`} />
+
+                {/* Ambient Radial Glow in Modal */}
+                <div className={`absolute top-0 right-0 w-60 h-60 bg-gradient-to-br ${selectedCard.ambientGlow} to-transparent rounded-full blur-3xl opacity-30 pointer-events-none`} />
+
+                {/* Modal Header */}
+                <div className="relative z-10 p-5 sm:p-6 pb-4 border-b border-white/10 flex items-start justify-between gap-4 flex-shrink-0">
+                  <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
+                    <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br ${selectedCard.innerGradient} flex items-center justify-center flex-shrink-0 shadow-lg shadow-black/40 text-white`}>
+                      {React.createElement(selectedCard.icon, {
+                        className: "w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-sm",
+                        strokeWidth: 2.2
+                      })}
+                    </div>
+                    <div className="min-w-0">
+                      <span className="inline-flex items-center text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-white/10 border border-white/15 text-white mb-1 font-bengali shadow-sm">
+                        {selectedCard.tag}
+                      </span>
+                      <h3 className="text-xl sm:text-2xl font-bold font-bengali text-white tracking-tight">
+                        {selectedCard.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-emerald-200/80 font-medium truncate">
+                        {selectedCard.modal.subtitle}
+                      </p>
+                    </div>
                   </div>
+
+                  {/* Close (X) Button */}
+                  <button
+                    onClick={() => setSelectedCard(null)}
+                    aria-label="Close modal"
+                    className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer flex-shrink-0 border border-white/15 hover:rotate-90 duration-200"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+
+                {/* Modal Scrollable Body */}
+                <div className="relative z-10 p-5 sm:p-6 overflow-y-auto space-y-4 text-slate-200 text-sm">
+                  {/* Brief Department Description */}
+                  <div className="p-3.5 sm:p-4 rounded-2xl bg-white/5 border border-white/10 leading-relaxed text-emerald-50">
+                    {selectedCard.modal.description}
+                  </div>
+
+                  {/* Feature & Curriculum Highlights */}
                   <div>
-                    <h3 className="text-xl font-bold text-white tracking-tight">
-                      ভাষা শিক্ষা কোর্স (Language Programs)
-                    </h3>
-                    <p className="text-xs text-emerald-200 mt-0.5">
-                      আপনার কাঙ্ক্ষিত ভাষা প্রোগ্রামটি নির্বাচন করুন:
-                    </p>
+                    <h4 className="text-xs uppercase font-bold tracking-wider text-amber-300 mb-2.5 flex items-center gap-1.5 font-bengali">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      বিভাগীয় মূল বৈশিষ্ট্য ও সুবিধা
+                    </h4>
+                    <ul className="space-y-2.5">
+                      {selectedCard.modal.bulletPoints.map((point, index) => (
+                        <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-                <button
-                  onClick={() => setShowLanguageModal(false)}
-                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition cursor-pointer"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
 
-              {/* 2 Quick Language Cards */}
-              <div className="space-y-4">
-                {/* Option 1: Spoken English Program */}
-                <div 
-                  onClick={() => handleScrollToLanguage('academic-programs')}
-                  className="group p-4 rounded-2xl bg-gradient-to-r from-emerald-900/60 to-slate-900/80 border border-emerald-500/30 hover:border-[#cfa852] transition-all duration-300 flex items-center justify-between cursor-pointer shadow-lg hover:shadow-emerald-500/20"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-[#cfa852] text-slate-950 font-bold flex items-center justify-center text-sm shadow">
-                      ENG
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-bold text-white text-base group-hover:text-amber-300 transition-colors">
-                          Spoken English (স্পোকেন ইংলিশ)
-                        </h4>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold">
-                          কিডস ও জুনিয়র
-                        </span>
-                      </div>
-                      <p className="text-xs text-slate-300 mt-1">
-                        ব্রিটিশ ও আমেরিকান ফোনেটিক্স ও ফ্লুয়েন্ট স্পোকেন দক্ষতা
-                      </p>
-                    </div>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-[#cfa852] group-hover:translate-x-1.5 transition-transform flex-shrink-0 ml-2" />
+                {/* Modal Footer Actions */}
+                <div className="relative z-10 p-4 sm:p-5 pt-3 border-t border-white/10 bg-black/40 flex flex-col sm:flex-row items-center justify-end gap-2.5 flex-shrink-0">
+                  {selectedCard.modal.secondaryActionLabel && selectedCard.modal.onSecondaryAction && (
+                    <button
+                      onClick={selectedCard.modal.onSecondaryAction}
+                      className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white text-xs sm:text-sm font-semibold transition cursor-pointer flex items-center justify-center gap-2"
+                    >
+                      {selectedCard.modal.secondaryActionLabel.includes('018') ? (
+                        <PhoneCall className="w-3.5 h-3.5 text-emerald-400" />
+                      ) : null}
+                      {selectedCard.modal.secondaryActionLabel}
+                    </button>
+                  )}
+                  <button
+                    onClick={selectedCard.modal.onPrimaryAction}
+                    className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-[#cfa852] hover:from-amber-300 hover:to-amber-500 text-slate-950 text-xs sm:text-sm font-bold shadow-lg shadow-amber-400/20 hover:shadow-amber-400/40 transition-all cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    <span>{selectedCard.modal.primaryActionLabel}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
                 </div>
-
-                {/* Option 2: Spoken Arabic & Muhadasah Program */}
-                <div 
-                  onClick={() => handleScrollToLanguage('academic-programs')}
-                  className="group p-4 rounded-2xl bg-gradient-to-r from-teal-900/60 to-slate-900/80 border border-teal-500/30 hover:border-[#cfa852] transition-all duration-300 flex items-center justify-between cursor-pointer shadow-lg hover:shadow-teal-500/20"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white font-arabic font-bold flex items-center justify-center text-lg shadow">
-                      عربي
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h4 className="font-bold text-white text-base group-hover:text-amber-300 transition-colors">
-                          মুহাদাসা ও আরবি ভাষা (Spoken Arabic)
-                        </h4>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">
-                          কুরআনিক আরবি
-                        </span>
-                      </div>
-                      <p className="text-xs text-slate-300 mt-1">
-                        আরবি কথোপকথন, ব্যাকরণ ও কুরআন অনুধাবনের আধুনিক পাঠ্যক্রম
-                      </p>
-                    </div>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-[#cfa852] group-hover:translate-x-1.5 transition-transform flex-shrink-0 ml-2" />
-                </div>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-white/10 text-center">
-                <span className="text-xs text-slate-400">
-                  সরাসরি সেকশনে যেতে যেকোনো একটি অপশনে ক্লিক করুন
-                </span>
-              </div>
-            </div>
-          </div>
-        )}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
 
@@ -375,13 +515,13 @@ const Hero: React.FC = () => {
           transition={{ repeat: Infinity, duration: 32, ease: "linear" }}
           className="whitespace-nowrap text-base md:text-lg font-bold tracking-wide text-amber-400 drop-shadow flex gap-8 items-center"
         >
-          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman Siddik (Founder & Chairman).</span>
           <span className="text-white/80 font-bold text-xl">•</span>
-          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman Siddik (Founder & Chairman).</span>
           <span className="text-white/80 font-bold text-xl">•</span>
-          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman Siddik (Founder & Chairman).</span>
           <span className="text-white/80 font-bold text-xl">•</span>
-          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman (Founder & Chairman).</span>
+          <span>Welcome to <span className="text-yellow-300 font-extrabold">Darul Haramain Academy.</span> Founded by Hafizur Rahman Siddik (Founder & Chairman).</span>
         </motion.div>
       </div>
     </section>
