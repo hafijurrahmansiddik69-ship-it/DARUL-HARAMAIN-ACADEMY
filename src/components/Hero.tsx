@@ -120,18 +120,18 @@ const Hero: React.FC = () => {
         }
       }
     },
-    // Card 3 (Bright Emerald Green Gradient)
+    // Card 3 (Deep Dark Forest / Emerald Green Gradient)
     {
       id: '3-in-1-curriculum',
       tag: 'কওমি • আলিয়া • জেনারেল',
       title: '3-in-1 সমন্বিত শিক্ষাক্রম',
       icon: Layers,
-      accentName: 'Bright Emerald Green',
-      innerGradient: 'from-[#059669] via-[#10b981] to-[#34d399]',
-      borderColor: 'border-[#10b981]',
-      glowShadow: 'shadow-[0_0_18px_rgba(16,185,129,0.28)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(16,185,129,0.55)]',
-      ambientGlow: 'from-emerald-500/30',
+      accentName: 'Deep Dark Forest / Emerald Green',
+      innerGradient: 'from-[#044D35] via-[#076344] to-[#0B7A55]',
+      borderColor: 'border-[#0B7A55]',
+      glowShadow: 'shadow-[0_0_18px_rgba(11,122,85,0.35)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(11,122,85,0.65)]',
+      ambientGlow: 'from-[#0B7A55]/35',
       modal: {
         subtitle: 'ঐতিহ্য ও আধুনিকতার অনন্য ত্রিবেণী সংগম',
         description: 'কওমির গভীর দ্বীনি বুনিয়াদ, আলিয়ার সরকারি কারিকুলাম এবং আধুনিক বিজ্ঞান ও সাধারণ শিক্ষার যুগোপযোগী সমন্বয়। আমাদের লক্ষ্য একাধারে বিজ্ঞ আলেম ও যোগ্য আধুনিক নাগরিক গড়ে তোলা।',
@@ -215,18 +215,18 @@ const Hero: React.FC = () => {
         }
       }
     },
-    // Card 6 (Teal / Mint Green Gradient Accent)
+    // Card 6 (Rich Deep Purple / Royal Indigo Gradient Accent)
     {
       id: 'sunnah-tarbiyah',
       tag: 'আখলাক ও চরিত্র গঠন',
       title: 'সুন্নাহভিত্তিক তারবিয়াত',
       icon: Heart,
-      accentName: 'Teal / Mint Green',
-      innerGradient: 'from-[#0d9488] via-[#14b8a6] to-[#5eead4]',
-      borderColor: 'border-[#14b8a6]',
-      glowShadow: 'shadow-[0_0_18px_rgba(20,184,166,0.28)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(20,184,166,0.55)]',
-      ambientGlow: 'from-teal-500/30',
+      accentName: 'Rich Deep Purple / Royal Indigo',
+      innerGradient: 'from-[#3B1E54] via-[#4A2686] to-[#5C2FC2]',
+      borderColor: 'border-[#5C2FC2]',
+      glowShadow: 'shadow-[0_0_18px_rgba(92,47,194,0.35)]',
+      glowHover: 'hover:shadow-[0_0_30px_rgba(92,47,194,0.65)]',
+      ambientGlow: 'from-[#5C2FC2]/35',
       modal: {
         subtitle: 'আদর্শ চরিত্র ও আত্মিক পরিশুদ্ধির জীবন্ত পাঠশালা',
         description: 'শুধু পুঁথিগত শিক্ষাই যথেষ্ট নয়; রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের অনুপম চরিত্র ও আদবের বাস্তব প্রতিফলনে গড়ে তোলা হয় প্রতিটি শিক্ষার্থীর নৈতিক সত্ত্বা।',
