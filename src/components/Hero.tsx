@@ -306,19 +306,6 @@ const Hero: React.FC = () => {
 
       {/* Main Hero Container */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-10 md:pt-14 pb-12 flex flex-col items-center text-center">
-        
-        {/* Academy Logo */}
-        <div className="relative mb-5 group">
-          <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-400 via-[#cfa852] to-emerald-500 rounded-full blur opacity-60 group-hover:opacity-100 transition duration-500"></div>
-          <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full bg-white p-1.5 shadow-2xl border-2 border-[#cfa852]">
-            <img
-              src="/src/assets/images/academy_logo_1791617941870.jpg"
-              alt="Darul Haramain Academy Logo"
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-contain rounded-full"
-            />
-          </div>
-        </div>
 
         {/* Arabic Calligraphic Header (Amiri Font) */}
         <div className="mb-2">

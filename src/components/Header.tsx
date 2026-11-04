@@ -301,7 +301,7 @@ export default function Header() {
           <Link to="/" className="flex items-center gap-3 md:gap-3.5 group">
             <div className="w-11 h-11 sm:w-13 sm:h-13 flex-shrink-0 rounded-full overflow-hidden border-2 border-emerald-800/20 p-0.5 bg-white shadow-sm group-hover:border-[#cfa852] transition-all duration-300">
               <img 
-                src="/src/assets/images/academy_logo_1791617941870.jpg" 
+                src="https://res.cloudinary.com/dlklqihg6/image/upload/v1793816845/mnizlbkxqkvyh6vyki2f.jpg" 
                 alt="দারুল হারামাইন একাডেমি লোগো" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain rounded-full group-hover:scale-105 transition-transform duration-300"
@@ -422,7 +422,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full p-[1.5px] bg-gradient-to-tr from-amber-400 to-[#cfa852] overflow-hidden flex-shrink-0 shadow">
               <img 
-                src="/src/assets/images/academy_logo_1791617941870.jpg" 
+                src="https://res.cloudinary.com/dlklqihg6/image/upload/v1793816845/mnizlbkxqkvyh6vyki2f.jpg" 
                 alt="দারুল হারামাইন একাডেমি" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain rounded-full bg-white"

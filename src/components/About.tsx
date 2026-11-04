@@ -40,7 +40,7 @@ export default function About() {
             <div className="relative bg-slate-50 p-4 md:p-6 rounded-3xl shadow-xl border border-emerald-100 flex flex-col items-center text-center">
               <div className="w-full max-h-[360px] flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm border border-slate-100 mb-5">
                 <img 
-                  src="/src/assets/images/academy_logo_1791617941870.jpg" 
+                  src="https://res.cloudinary.com/dlklqihg6/image/upload/v1793816845/mnizlbkxqkvyh6vyki2f.jpg" 
                   alt="DARUL HARAMAIN ACADEMY Crest" 
                   referrerPolicy="no-referrer"
                   className="w-full h-auto max-h-[300px] object-contain rounded-xl select-none" 
@@ -247,32 +247,32 @@ export default function About() {
 
                 {/* Salutation */}
                 <div className="mb-5 pb-3 border-b border-slate-100">
-                  <h3 className="text-lg sm:text-2xl font-bold text-emerald-950">
-                    প্রিয় অভিভাবক ও দ্বীনি ভাই-বোনেরা,
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-emerald-950 tracking-tight">
+                    সম্মানিত অভিভাবক ও সুধী,
                   </h3>
-                  <p className="font-arabic text-lg sm:text-xl text-emerald-800 font-bold mt-1 tracking-wide">
-                    السلام عليكم ورحمة الله وبركاته
+                  <p className="text-emerald-800 font-semibold italic text-base sm:text-lg mt-1.5">
+                    আসসালামু আলাইকুম ওয়া রহমাতুল্লাহ!
                   </p>
                 </div>
 
                 {/* Message Body Paragraphs */}
                 <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
                   <p>
-                    একবিংশ শতাব্দীর এই অস্থিতিশীল, প্রযুক্তিগতভাবে দ্রুত পরিবর্তনশীল ও চ্যালেঞ্জিং যুগে আমাদের সবচেয়ে বড় দুশ্চিন্তা ও আমানতের জায়গা—সন্তানের উজ্জ্বল ভবিষ্যৎ গঠন এবং তার ঈমান-আমল ও চরিত্র রক্ষা করা। চারপাশের আধুনিক শিক্ষার প্রসার আমাদের সন্তানকে হয়তো জাগতিক দিক থেকে দক্ষ করে তুলছে, কিন্তু অনেক ক্ষেত্রে তারা হারিয়ে ফেলছে আত্মিক শুভ্রতা, নৈতিক মূল্যবোধ, সুন্নাহর প্রতি অনুরাগ ও তাদের প্রকৃত ইসলামী পরিচয়।
+                    আজকের প্রযুক্তিনির্ভর ও দ্রুত পরিবর্তনশীল বিশ্বে আমাদের সবচেয়ে বড় চিন্তা—সন্তানের ঈমান, চরিত্র ও ভবিষ্যৎ রক্ষা করা। সাধারণ শিক্ষা সন্তানকে জাগতিকভাবে দক্ষ করলেও অনেক সময় কেড়ে নেয় আত্মিক শুদ্ধতা ও সুন্নাহর ভালোবাসা।
                   </p>
 
                   <p>
-                    হাজারো স্কুল ও মাদ্রাসার ভিড়ে <strong className="text-emerald-900 font-bold">দারুল হারামাইন একাডেমি (Darul Haramain Academy)</strong> কোনো সাধারণ শিক্ষা প্রতিষ্ঠান নয়; বরং এটি আধুনিকতা ও খাঁটি দ্বীনি শিক্ষার এক সোনালী মেলবন্ধন। আমাদের স্বপ্ন ও লক্ষ্য অত্যন্ত সুস্পষ্ট—আমরা এমন এক প্রজন্ম গড়ে তুলতে চাই, যারা:
+                    <strong className="text-emerald-900 font-bold">দারুল হারামাইন একাডেমি</strong> কোনো সাধারণ প্রতিষ্ঠান নয়; এটি আধুনিক জ্ঞান ও খাঁটি দ্বীনি শিক্ষার এক সোনালী মেলবন্ধন। আমাদের লক্ষ্য এমন এক বিশ্বমানের প্রজন্ম গড়ে তোলা, যারা:
                   </p>
 
                   {/* Bulleted Points Grid */}
-                  <div className="my-4 space-y-2.5 bg-gradient-to-r from-emerald-50/80 to-slate-50 p-4 sm:p-5 rounded-2xl border border-emerald-100/90 shadow-2xs">
+                  <div className="my-5 space-y-3 bg-gradient-to-r from-emerald-50/90 via-slate-50 to-amber-50/40 p-4 sm:p-5 rounded-2xl border border-emerald-100/90 shadow-2xs">
                     <div className="flex items-start gap-3">
                       <div className="w-5 h-5 rounded-full bg-emerald-700 text-white flex items-center justify-center flex-shrink-0 mt-0.5 shadow-2xs">
                         <CheckCircle2 className="w-3.5 h-3.5 text-amber-300" />
                       </div>
                       <p className="text-sm sm:text-base text-slate-800 leading-snug">
-                        পবিত্র কুরআনের জ্ঞানে আলোকিত হবে এবং আন্তর্জাতিক মানের বিশুদ্ধ তিলাওয়াত ও হিফজ সম্পন্ন করবে।
+                        <strong className="text-emerald-950 font-bold">কুরআনের আলোয় আলোকিত:</strong> আন্তর্জাতিক মানের শুদ্ধ তিলাওয়াত ও হিফজ সম্পন্ন করবে।
                       </p>
                     </div>
 
@@ -281,7 +281,7 @@ export default function About() {
                         <CheckCircle2 className="w-3.5 h-3.5 text-amber-300" />
                       </div>
                       <p className="text-sm sm:text-base text-slate-800 leading-snug">
-                        সাধারণ শিক্ষা ও আধুনিক বিজ্ঞান-প্রযুক্তিতে সমকালীন যেকোনো শিক্ষার্থীর চেয়ে এক ধাপ এগিয়ে থাকবে।
+                        <strong className="text-emerald-950 font-bold">আধুনিক শিক্ষায় সেরা:</strong> বিজ্ঞান, প্রযুক্তি ও সাধারণ শিক্ষায় সমকালীন যেকোনো শিক্ষার্থীর চেয়ে এগিয়ে থাকবে।
                       </p>
                     </div>
 
@@ -290,7 +290,7 @@ export default function About() {
                         <CheckCircle2 className="w-3.5 h-3.5 text-amber-300" />
                       </div>
                       <p className="text-sm sm:text-base text-slate-800 leading-snug">
-                        আরবি ও ইংরেজি—উভয় ভাষায় সাবলীল যোগাযোগে পারদর্শী হয়ে বিশ্বমঞ্চে ইসলামের সঠিক প্রতিনিধিত্ব করবে।
+                        <strong className="text-emerald-950 font-bold">বিশ্বমঞ্চে ইসলামের প্রতিনিধি:</strong> আরবি ও ইংরেজি উভয় ভাষায় সাবলীল দক্ষতায় দ্বীনের দাওয়াত পৌঁছে দেবে।
                       </p>
                     </div>
 
@@ -299,26 +299,20 @@ export default function About() {
                         <CheckCircle2 className="w-3.5 h-3.5 text-amber-300" />
                       </div>
                       <p className="text-sm sm:text-base text-slate-800 leading-snug">
-                        সর্বোপরি, সুন্নাহর রঙে রঙিন হয়ে মা-বাবা ও সমাজের প্রতি দায়বদ্ধ, বিনয়ী ও আত্মমর্যাদাশীল মানুষ হিসেবে গড়ে উঠবে।
+                        <strong className="text-emerald-950 font-bold">সুন্নাহভিত্তিক চরিত্র:</strong> নম্র, বিনীত ও মা-বাবার প্রতি অনুগত আদর্শ মানুষ হবে।
                       </p>
                     </div>
                   </div>
 
-                  <p>
-                    আমরা বিশ্বাস করি, প্রতিটি শিশুই মহান আল্লাহর পক্ষ থেকে এক একটি অমূল্য আমানত। আর এই আমানতের সঠিক পরিচর্যা ও যোগ্য করে গড়ে তোলাই আমাদের মূল ব্রত। অভিজ্ঞ শিক্ষকমণ্ডলী, আন্তর্জাতিক মানের কারিকুলাম এবং সুন্নাহভিত্তিক কঠোর তারবিয়াতের সমন্বয়ে আমরা আপনার সন্তানকে দুনিয়া ও আখিরাত—উভয় জাহানের সফলতার পথে এগিয়ে নিতে অঙ্গীকারাবদ্ধ।
-                  </p>
-
-                  <div className="bg-amber-50/70 p-4 sm:p-5 rounded-2xl border border-amber-200/70 text-emerald-950 font-medium leading-relaxed">
-                    আসুন, আপনার কলিজার টুকরো সন্তানের একটি আলোকিত ও নিরাপদ ভবিষ্যৎ বিনির্মাণে আমরা কাঁধে কাঁধ মিলিয়ে কাজ করি। আল্লাহ তায়ালা দারুল হারামাইন একাডেমিকে দ্বীনের এক সুদৃঢ় দুর্গ হিসেবে কবুল করুন এবং আমাদের সকল নিষ্ঠাবান প্রচেষ্টাকে বরকতময় করুন। আমিন।
+                  <div className="bg-amber-50/80 p-4 sm:p-5 rounded-2xl border border-amber-200/80 text-emerald-950 font-semibold text-sm sm:text-base leading-relaxed">
+                    আসুন, আপনার কলিজার টুকরো সন্তানকে উম্মাহর আলোকবর্তিকা বানানোর যাত্রায় যুক্ত হোন।
                   </div>
                 </div>
 
                 {/* Signature details */}
                 <div className="mt-8 pt-6 border-t border-emerald-100 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5">
                   <div className="text-slate-800">
-                    <p className="text-sm text-slate-600 font-medium">ওয়াসসালাম,</p>
-                    <p className="text-xs text-emerald-700 font-semibold mt-0.5">আপনাদের দোয়াপ্রার্থী,</p>
-                    <h4 className="text-xl sm:text-2xl font-bold text-emerald-950 mt-1">
+                    <h4 className="text-xl sm:text-2xl font-black text-emerald-950">
                       Hafizur Rahman Siddik
                     </h4>
                     <span className="text-xs sm:text-sm font-semibold text-emerald-800 block mt-0.5">

@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img 
-              src="/src/assets/images/academy_logo_1791617941870.jpg" 
+              src="https://res.cloudinary.com/dlklqihg6/image/upload/v1793816845/mnizlbkxqkvyh6vyki2f.jpg" 
               alt="DARUL HARAMAIN ACADEMY Logo" 
               referrerPolicy="no-referrer"
               className="h-12 w-12 object-contain rounded-full border border-[#cfa852]/30"
