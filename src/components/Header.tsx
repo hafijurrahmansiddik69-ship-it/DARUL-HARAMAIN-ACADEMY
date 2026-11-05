@@ -377,12 +377,12 @@ export default function Header() {
 
           {/* Right Header Actions */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Desktop Online Admission Button */}
+            {/* Desktop Online Admission Button (Attractive Vivid Navy Blue) */}
             <button
               onClick={() => openAdmission()}
-              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-[#cfa852] hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-xs sm:text-xs shadow-sm transition-all cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-[#081F5C] via-[#0E3D9E] to-[#1E63EB] hover:from-[#071A4E] hover:to-[#164DBA] text-white font-bold text-xs sm:text-xs shadow-md shadow-blue-950/40 hover:shadow-blue-900/60 border border-blue-400/30 transition-all cursor-pointer"
             >
-              <GraduationCap className="w-4 h-4 flex-shrink-0" />
+              <GraduationCap className="w-4 h-4 flex-shrink-0 text-white" />
               <span>অনলাইন ভর্তি</span>
             </button>
 
@@ -533,9 +533,9 @@ export default function Header() {
               setIsDrawerOpen(false);
               openAdmission();
             }}
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 via-[#cfa852] to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold text-sm shadow-lg flex items-center justify-center gap-2 transition cursor-pointer"
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-[#081F5C] via-[#0E3D9E] to-[#1E63EB] hover:from-[#071A4E] hover:to-[#164DBA] text-white font-bold text-sm shadow-lg shadow-black/50 border border-blue-400/30 flex items-center justify-center gap-2 transition cursor-pointer"
           >
-            <GraduationCap className="w-5 h-5" />
+            <GraduationCap className="w-5 h-5 text-white" />
             <span>অনলাইন ভর্তি আবেদন</span>
           </button>
 

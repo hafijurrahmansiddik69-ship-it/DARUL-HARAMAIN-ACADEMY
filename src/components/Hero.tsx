@@ -58,18 +58,18 @@ const Hero: React.FC = () => {
   // =========================================================================
 
   const column1Cards: FeatureCardItem[] = [
-    // Card 1 (Yellow / Amber Gradient)
+    // Card 1 (Attractive Vivid Navy Blue Gradient)
     {
       id: 'online-admission',
       tag: 'ভর্তি চলছে',
       title: 'অনলাইন ভর্তি',
       icon: GraduationCap,
-      accentName: 'Yellow / Amber',
-      innerGradient: 'from-[#d97706] via-[#f59e0b] to-[#fbbf24]',
-      borderColor: 'border-[#f59e0b]',
-      glowShadow: 'shadow-[0_0_18px_rgba(245,158,11,0.28)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(245,158,11,0.55)]',
-      ambientGlow: 'from-amber-500/30',
+      accentName: 'Attractive Vivid Navy Blue',
+      innerGradient: 'from-[#081F5C] via-[#0E3D9E] to-[#1E63EB]',
+      borderColor: 'border-[#2563EB]',
+      glowShadow: 'shadow-[0_0_24px_rgba(30,99,235,0.48)]',
+      glowHover: 'hover:shadow-[0_0_36px_rgba(37,99,235,0.85)]',
+      ambientGlow: 'from-[#1E63EB]/45',
       modal: {
         subtitle: 'দারুল হারামাইন একাডেমি - সেশন ২০২৫-২০২৬',
         description: 'প্লে-গ্রুপ থেকে দাখিল ও হিফজ বিভাগে নতুন শিক্ষাবর্ষে শিক্ষার্থী ভর্তি চলছে। মেধা ও নৈতিকতার অনন্য মেলবন্ধনে আপনার সন্তানের আলোকিত দ্বীনি ও আধুনিক ভবিষ্যৎ নিশ্চিত করুন।',
@@ -90,18 +90,18 @@ const Hero: React.FC = () => {
         }
       }
     },
-    // Card 2 (Orange Accent - Placed directly under 'অনলাইন ভর্তি')
+    // Card 2 (Vivid Warm Orange Accent - Placed directly under 'অনলাইন ভর্তি')
     {
       id: 'language-courses',
       tag: 'ইংরেজি ও আরবি',
       title: 'ভাষা শিক্ষা কোর্স',
       icon: Languages,
-      accentName: 'Orange Accent',
-      innerGradient: 'from-[#ea580c] via-[#f97316] to-[#fb923c]',
-      borderColor: 'border-[#f97316]',
-      glowShadow: 'shadow-[0_0_18px_rgba(249,115,22,0.28)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(249,115,22,0.55)]',
-      ambientGlow: 'from-orange-500/30',
+      accentName: 'Vivid Warm Orange',
+      innerGradient: 'from-[#C2410C] via-[#EA580C] to-[#FB923C]',
+      borderColor: 'border-[#F97316]',
+      glowShadow: 'shadow-[0_0_20px_rgba(249,115,22,0.40)]',
+      glowHover: 'hover:shadow-[0_0_34px_rgba(251,146,60,0.75)]',
+      ambientGlow: 'from-[#EA580C]/40',
       modal: {
         subtitle: 'আন্তর্জাতিক মানের দ্বিভাষিক কমিউনিকেশন স্কিল',
         description: 'ইংরেজি ও আরবি—বিশ্বের সবচেয়ে গুরুত্বপূর্ণ দুটি ভাষায় সাবলীল দক্ষতা অর্জনের জন্য দারুল হারামাইন একাডেমির বিশেষ পাঠ্যক্রম ও ল্যাঙ্গুয়েজ ল্যাব।',
@@ -120,18 +120,18 @@ const Hero: React.FC = () => {
         }
       }
     },
-    // Card 3 (Deep Dark Forest / Emerald Green Gradient)
+    // Card 3 (Rich Deep Emerald / Forest Green Gradient)
     {
       id: '3-in-1-curriculum',
       tag: 'কওমি • আলিয়া • জেনারেল',
       title: '3-in-1 সমন্বিত শিক্ষাক্রম',
       icon: Layers,
-      accentName: 'Deep Dark Forest / Emerald Green',
-      innerGradient: 'from-[#044D35] via-[#076344] to-[#0B7A55]',
-      borderColor: 'border-[#0B7A55]',
-      glowShadow: 'shadow-[0_0_18px_rgba(11,122,85,0.35)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(11,122,85,0.65)]',
-      ambientGlow: 'from-[#0B7A55]/35',
+      accentName: 'Deep Emerald / Forest Green',
+      innerGradient: 'from-[#064E3B] via-[#065F46] to-[#047857]',
+      borderColor: 'border-[#059669]',
+      glowShadow: 'shadow-[0_0_20px_rgba(5,150,105,0.40)]',
+      glowHover: 'hover:shadow-[0_0_34px_rgba(16,185,129,0.75)]',
+      ambientGlow: 'from-[#059669]/40',
       modal: {
         subtitle: 'ঐতিহ্য ও আধুনিকতার অনন্য ত্রিবেণী সংগম',
         description: 'কওমির গভীর দ্বীনি বুনিয়াদ, আলিয়ার সরকারি কারিকুলাম এবং আধুনিক বিজ্ঞান ও সাধারণ শিক্ষার যুগোপযোগী সমন্বয়। আমাদের লক্ষ্য একাধারে বিজ্ঞ আলেম ও যোগ্য আধুনিক নাগরিক গড়ে তোলা।',
@@ -153,18 +153,18 @@ const Hero: React.FC = () => {
   ];
 
   const column2Cards: FeatureCardItem[] = [
-    // Card 4 (Cyan / Ocean Blue Gradient)
+    // Card 4 (Vibrant Crimson Red Gradient)
     {
       id: 'departments',
       tag: 'প্লে থেকে দাখিল',
       title: 'আমাদের বিভাগসমূহ',
       icon: BookOpen,
-      accentName: 'Cyan / Ocean Blue',
-      innerGradient: 'from-[#0284c7] via-[#0ea5e9] to-[#38bdf8]',
-      borderColor: 'border-[#0ea5e9]',
-      glowShadow: 'shadow-[0_0_18px_rgba(14,165,233,0.28)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(14,165,233,0.55)]',
-      ambientGlow: 'from-cyan-500/30',
+      accentName: 'Vibrant Crimson Red',
+      innerGradient: 'from-[#991B1B] via-[#DC2626] to-[#EF4444]',
+      borderColor: 'border-[#EF4444]',
+      glowShadow: 'shadow-[0_0_20px_rgba(239,68,68,0.42)]',
+      glowHover: 'hover:shadow-[0_0_34px_rgba(248,113,113,0.78)]',
+      ambientGlow: 'from-[#DC2626]/40',
       modal: {
         subtitle: 'বয়সভিত্তিক সুবিন্যস্ত ও যুগোপযোগী বিভাগসমূহ',
         description: 'দারুল হারামাইন একাডেমিতে প্রতিটি শ্রেণির শিক্ষার্থীর বয়স ও মানসিক বিকাশ বিবেচনা করে আলাদা বিভাগীয় অবকাঠামো ও শিক্ষাপদ্ধতি পরিচালনা করা হয়।',
@@ -183,18 +183,18 @@ const Hero: React.FC = () => {
         }
       }
     },
-    // Card 5 (Warm Golden / Yellow Gradient Accent)
+    // Card 5 (Sparkling Glossy Cyan-Blue Gradient)
     {
       id: 'noorani-hifz',
       tag: 'আন্তর্জাতিক মান',
       title: 'নূরানী হিফজ ও তাজবীদ',
       icon: Award,
-      accentName: 'Warm Golden / Yellow',
-      innerGradient: 'from-[#ca8a04] via-[#eab308] to-[#fde047]',
-      borderColor: 'border-[#eab308]',
-      glowShadow: 'shadow-[0_0_18px_rgba(234,179,8,0.28)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(234,179,8,0.55)]',
-      ambientGlow: 'from-yellow-500/30',
+      accentName: 'Sparkling Glossy Blue',
+      innerGradient: 'from-[#0284C7] via-[#0EA5E9] to-[#38BDF8]',
+      borderColor: 'border-[#38BDF8]',
+      glowShadow: 'shadow-[0_0_20px_rgba(14,165,233,0.45)]',
+      glowHover: 'hover:shadow-[0_0_34px_rgba(56,189,248,0.80)]',
+      ambientGlow: 'from-[#0EA5E9]/45',
       modal: {
         subtitle: 'বিশুদ্ধ মাখরাজ, মিষ্টি সুর ও আন্তর্জাতিক মানের হিফজ প্রোগ্রাম',
         description: 'দেশ-বিদেশের অভিজ্ঞ ও আন্তর্জাতিক সনদপ্রাপ্ত হুফফাজে কেরামের প্রত্যক্ষ তত্ত্বাবধানে তাজবীদ ও তারতীলের সাথে পবিত্র কুরআনুল কারীম হিফজ করার বিশেষ ব্যবস্থা।',
@@ -215,18 +215,18 @@ const Hero: React.FC = () => {
         }
       }
     },
-    // Card 6 (Rich Deep Purple / Royal Indigo Gradient Accent)
+    // Card 6 (Rich Royal Violet / Deep Purple Gradient)
     {
       id: 'sunnah-tarbiyah',
       tag: 'আখলাক ও চরিত্র গঠন',
       title: 'সুন্নাহভিত্তিক তারবিয়াত',
       icon: Heart,
-      accentName: 'Rich Deep Purple / Royal Indigo',
-      innerGradient: 'from-[#3B1E54] via-[#4A2686] to-[#5C2FC2]',
-      borderColor: 'border-[#5C2FC2]',
-      glowShadow: 'shadow-[0_0_18px_rgba(92,47,194,0.35)]',
-      glowHover: 'hover:shadow-[0_0_30px_rgba(92,47,194,0.65)]',
-      ambientGlow: 'from-[#5C2FC2]/35',
+      accentName: 'Rich Royal Violet / Deep Purple',
+      innerGradient: 'from-[#4C1D95] via-[#6D28D9] to-[#8B5CF6]',
+      borderColor: 'border-[#8B5CF6]',
+      glowShadow: 'shadow-[0_0_20px_rgba(139,92,246,0.40)]',
+      glowHover: 'hover:shadow-[0_0_34px_rgba(167,139,250,0.75)]',
+      ambientGlow: 'from-[#6D28D9]/40',
       modal: {
         subtitle: 'আদর্শ চরিত্র ও আত্মিক পরিশুদ্ধির জীবন্ত পাঠশালা',
         description: 'শুধু পুঁথিগত শিক্ষাই যথেষ্ট নয়; রাসূলুল্লাহ সাল্লাল্লাহু আলাইহি ওয়াসাল্লামের অনুপম চরিত্র ও আদবের বাস্তব প্রতিফলনে গড়ে তোলা হয় প্রতিটি শিক্ষার্থীর নৈতিক সত্ত্বা।',
@@ -262,26 +262,32 @@ const Hero: React.FC = () => {
             setSelectedCard(card);
           }
         }}
-        className={`group relative flex flex-col justify-between overflow-hidden rounded-[20px] sm:rounded-[24px] md:rounded-[28px] bg-[#071712] border-2 ${card.borderColor} ${card.glowShadow} ${card.glowHover} transition-all duration-300 ease-out transform hover:-translate-y-1 sm:hover:-translate-y-1.5 hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-center p-2 sm:p-2.5 md:p-3 select-none`}
+        className={`group relative flex flex-col justify-between overflow-hidden rounded-[20px] sm:rounded-[24px] md:rounded-[28px] bg-gradient-to-b from-[#0B1E17] to-[#040F0B] border-2 ${card.borderColor} ${card.glowShadow} ${card.glowHover} transition-all duration-300 ease-out transform hover:-translate-y-1 sm:hover:-translate-y-1.5 hover:scale-[1.025] active:scale-[0.98] cursor-pointer text-center p-2 sm:p-2.5 md:p-3 select-none backdrop-blur-md`}
       >
-        {/* Top Inner Gradient Box */}
+        {/* Subtle Ambient Radial Glow inside Card */}
+        <div className={`absolute -top-10 -right-10 w-28 h-28 bg-gradient-to-br ${card.ambientGlow} to-transparent rounded-full blur-2xl opacity-40 pointer-events-none group-hover:opacity-80 transition-opacity duration-300`} />
+
+        {/* Top Inner Gradient Box with Ultra-Glossy Sheen */}
         <div 
-          className={`w-full rounded-[14px] sm:rounded-[18px] md:rounded-[20px] bg-gradient-to-b ${card.innerGradient} py-3 sm:py-4.5 md:py-6 px-1.5 sm:px-3 flex flex-col items-center justify-center shadow-md group-hover:brightness-105 transition-all duration-300`}
+          className={`relative w-full rounded-[14px] sm:rounded-[18px] md:rounded-[20px] bg-gradient-to-br ${card.innerGradient} py-3 sm:py-4.5 md:py-6 px-1.5 sm:px-3 flex flex-col items-center justify-center shadow-lg overflow-hidden group-hover:brightness-110 transition-all duration-300`}
         >
+          {/* Glossy Top Glass Highlight / Light Reflection */}
+          <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/30 via-white/10 to-transparent rounded-t-[14px] sm:rounded-t-[18px] md:rounded-t-[20px] pointer-events-none" />
+
           {/* Tag at Top of Inner Box */}
-          <span className="text-white font-bold text-[11px] sm:text-xs md:text-sm font-bengali tracking-wide drop-shadow-sm mb-1.5 sm:mb-2 text-center line-clamp-1">
+          <span className="relative z-10 text-white font-extrabold text-[11px] sm:text-xs md:text-sm font-bengali tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] mb-1.5 sm:mb-2 text-center line-clamp-1">
             {card.tag}
           </span>
 
-          {/* Center Icon */}
-          <div className="text-white drop-shadow-md group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-            <IconComp className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" strokeWidth={2.2} />
+          {/* Center Icon with Glossy Drop Shadow */}
+          <div className="relative z-10 text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.65)] group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+            <IconComp className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" strokeWidth={2.4} />
           </div>
         </div>
 
         {/* Bottom Dark Area: Main Title */}
-        <div className="w-full pt-2 sm:pt-2.5 md:pt-3.5 pb-1 sm:pb-1.5 px-1 flex items-center justify-center">
-          <h3 className="text-white font-extrabold text-[12px] sm:text-sm md:text-base lg:text-lg font-bengali group-hover:text-amber-200 transition-colors tracking-tight text-center line-clamp-1 sm:line-clamp-2">
+        <div className="relative z-10 w-full pt-2 sm:pt-2.5 md:pt-3.5 pb-1 sm:pb-1.5 px-1 flex items-center justify-center">
+          <h3 className="text-white font-extrabold text-[12px] sm:text-sm md:text-base lg:text-lg font-bengali group-hover:text-amber-200 transition-colors tracking-tight text-center line-clamp-1 sm:line-clamp-2 drop-shadow-sm">
             {card.title}
           </h3>
         </div>
@@ -307,33 +313,33 @@ const Hero: React.FC = () => {
       {/* Main Hero Container */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-10 md:pt-14 pb-12 flex flex-col items-center text-center">
 
-        {/* Arabic Calligraphic Header (Amiri Font) */}
+        {/* Arabic Calligraphic Header (Amiri Font - Sharp Metallic Gold Accent) */}
         <div className="mb-2">
-          <span className="font-arabic text-2xl md:text-4xl text-[#cfa852] font-bold tracking-wider drop-shadow-md">
+          <span className="font-arabic text-2xl md:text-4xl text-[#E5C158] font-bold tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] filter">
             أكاديمية دار الحرمين
           </span>
         </div>
 
         {/* Academy Bengali & English Typography */}
         <div className="flex flex-col items-center justify-center mb-3">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-2 font-bengali drop-shadow-md">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-2 font-bengali drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
             দারুল হারামাইন একাডেমি
           </h1>
           
           <div className="flex flex-col items-center">
             {/* DARUL HARAMAIN - Large and prominent matching the Bengali title width & weight */}
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-wider bg-gradient-to-r from-amber-200 via-amber-400 to-[#cfa852] bg-clip-text text-transparent uppercase drop-shadow-sm font-sans">
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black tracking-wider bg-gradient-to-r from-amber-100 via-[#E5C158] to-[#D4AF37] bg-clip-text text-transparent uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] font-sans">
               DARUL HARAMAIN
             </span>
             {/* ACADEMY - Smaller & spaced out (ফাঁকা ফাঁকা) underneath */}
-            <span className="text-xs sm:text-sm md:text-base font-bold tracking-[0.35em] sm:tracking-[0.45em] text-emerald-200/90 uppercase mt-1 pl-[0.35em] sm:pl-[0.45em]">
+            <span className="text-xs sm:text-sm md:text-base font-bold tracking-[0.35em] sm:tracking-[0.45em] text-emerald-300 uppercase mt-1 pl-[0.35em] sm:pl-[0.45em] drop-shadow-sm">
               ACADEMY
             </span>
           </div>
         </div>
 
-        {/* Academic Tagline */}
-        <p className="text-base sm:text-lg md:text-xl text-amber-200/95 font-medium max-w-2xl mx-auto mb-3">
+        {/* Academic Tagline - Crisp White */}
+        <p className="text-base sm:text-lg md:text-xl text-white font-medium max-w-2xl mx-auto mb-3 drop-shadow-sm">
           An Arabic-English Medium Academy with Hifzul Quran
         </p>
 
